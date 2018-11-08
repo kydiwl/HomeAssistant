@@ -4,3 +4,9 @@ home-assistant_v2.db
 .storage/
 .cloud/
 dehydrated/
+.HA_VERSION
+.uuid
+home-assistant.log
+plex.conf
+webostv.conf
+www/
