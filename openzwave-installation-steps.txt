@@ -1,0 +1,11 @@
+# install cython
+pip3 install cython
+# Successfully installed cython-0.29
+
+# install gmake
+pkg install -y gmake
+# Extracting gmake-4.2.1_2: 100%
+
+# Install openzwave
+pip3 install python_openzwave==0.4.10 --upgrade
+# Install hung until I copied text from a previous command then connection to freenas terminated.  Was able to configure z-wave in home assistant.

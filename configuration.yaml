@@ -1,0 +1,130 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret latitude
+  longitude: !secret longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: !secret elevation
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/New_York
+  # Customization file
+  customize: !include customize.yaml
+  # Comment this
+  packages: !include_dir_named packages
+  # Notifications
+  #notify: !include notify.yaml
+
+# Show links to resources in log and frontend
+#introduction:
+
+# Enables running python scripts
+#python_script:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+# Sensors
+sensor: !include sensors.yml
+
+# Text to speech
+tts:
+  - platform: google
+    
+# Cloud
+cloud:
+
+# Notifications
+notify:
+  - name: kyles_phone
+    platform: smtp
+    server: smtp.gmail.com
+    port: 587
+    timeout: 15
+    sender: !secret ha_gmail_addr
+    encryption: starttls
+    username: !secret ha_gmail_addr
+    password: !secret ha_gmail_pass
+    recipient: !secret kyle_phone_txt_addr
+    sender_name: Home Assistant
+  - name: gmail
+    platform: smtp
+    server: smtp.gmail.com
+    port: 587
+    timeout: 15
+    sender: !secret ha_gmail_addr
+    encryption: starttls
+    username: !secret ha_gmail_addr
+    password: !secret ha_gmail_pass
+    recipient: !secret kyle_gmail_addr
+    sender_name: Home Assistant
+  - name: kyles_tv
+    host: !secret kyle_tv
+    platform: webostv
+    filename: webostv.conf
+    
+# Hue lights hub
+hue:
+  bridges:
+    - host: !secret hue_hub_addr
+
+#SSL/TLS
+http:
+  api_password: !secret hass_pass
+  ssl_certificate: !secret dehydrate_ssl_cert_path
+  ssl_key: !secret dehydrate_ssl_key_path
+  base_url: !secret dyn_dns_addr
+
+# Rachio irrigation controller switch
+#rachio:
+#  api_key: !secret rachio_api_key
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+
+panel_iframe:
+  # Rachio irrigation controller
+  rachio:
+    title: Rachio
+    url: "https://app.rach.io"
+    icon: mdi:water-pump
+  # Local weather staion
+  pws:
+    title: PWS Station - Eagles Point
+    url: "https://www.pwsweather.com/obs/KNCDURHA214.html"
+    icon: mdi:weather-pouring
+
+    

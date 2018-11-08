@@ -1,0 +1,6 @@
+secrets.yaml
+deps/
+home-assistant_v2.db
+.storage/
+.cloud/
+dehydrated/
