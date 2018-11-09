@@ -96,16 +96,7 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 
-panel_iframe:
-  # Rachio irrigation controller
-  rachio:
-    title: Rachio
-    url: "https://app.rach.io"
-    icon: mdi:water-pump
-  # Local weather staion
-  pws:
-    title: PWS Station - Eagles Point
-    url: "https://www.pwsweather.com/obs/KNCDURHA214.html"
-    icon: mdi:weather-pouring
+panel_iframe: !include iframe.yaml
+
 
     

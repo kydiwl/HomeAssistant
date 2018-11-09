@@ -1,0 +1,10 @@
+  # Rachio irrigation controller
+  rachio:
+    title: Rachio
+    url: "https://app.rach.io"
+    icon: mdi:water-pump
+  # Local weather staion
+  pws:
+    title: PWS Station - Eagles Point
+    url: "https://www.pwsweather.com/obs/KNCDURHA214.html"
+    icon: mdi:weather-pouring
