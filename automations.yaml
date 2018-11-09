@@ -1,0 +1,32 @@
+- id: '1541109387657'
+  alias: Family Room Nightlight On
+  trigger:
+  - event: sunset
+    platform: sun
+  action:
+  - data:
+      brightness_pct: 66
+      entity_id: light.hue_color_lamp_4
+    service: light.turn_on
+  - data:
+      message: Family room nightlight light is ON
+    service: notify.kyles_phone
+  - data:
+      message: Family room nightlight light is On
+    service: notify.kyles_tv
+- id: '1541758470475'
+  alias: Family Room Nightlight Off
+  trigger:
+  - event: sunrise
+    platform: sun
+  condition: []
+  action:
+  - data:
+      entity_id: light.hue_color_lamp_4
+    service: light.turn_off
+  - data:
+      message: Family room nightlight light is Off
+    service: notify.kyles_phone
+  - data:
+      message: Family room nightlight light is Off
+    service: notify.kyles_tv
