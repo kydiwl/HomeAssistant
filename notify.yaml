@@ -1,14 +1,6 @@
-- platform: smtp
+- platform: telegram
   name: kyles_phone
-  server: smtp.gmail.com
-  port: 587
-  timeout: 15
-  sender: !secret ha_gmail_addr
-  encryption: starttls
-  username: !secret ha_gmail_addr
-  password: !secret ha_gmail_pass
-  recipient: !secret kyle_phone_txt_addr
-  sender_name: Home Assistant
+  chat_id: !secret kyles_phone_telegram_chat_id
    
 - name: kyles_tv
   host: !secret kyle_tv
