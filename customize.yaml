@@ -1,0 +1,6 @@
+sensor.dark_sky_cloud_coverage:
+  friendly_name: Cloud Coverage
+  icon: mdi:cloud-outline
+sensor.dark_sky_humidity:
+  friendly_name: Outdoor Humidity
+  icon: mdi:water
