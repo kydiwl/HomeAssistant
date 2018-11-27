@@ -6,7 +6,7 @@
   action:
   - data:
       brightness_pct: 66
-      entity_id: light.hue_color_lamp_4
+      entity_id: light.hue_family_room_nightlight
     service: light.turn_on
   - data:
       message: Family room nightlight light is ON
@@ -22,7 +22,7 @@
   condition: []
   action:
   - data:
-      entity_id: light.hue_color_lamp_4
+      entity_id: light.hue_family_room_nightlight
     service: light.turn_off
   - data:
       message: Family room nightlight light is Off
