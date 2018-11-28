@@ -1,0 +1,8 @@
+sun_card:
+  name: Sun
+  entities:
+  - sun.sun
+  - sensor.sunrise_time
+  - sensor.sunset_time
+  - sensor.sunrise_dawn
+  - sensor.sunset_dusk

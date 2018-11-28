@@ -67,6 +67,7 @@ weather_tab:
   view: yes
   name: Weather
   entities:
+  - group.sun_card
   - group.wu_pws_weather_forecast
   - group.wu_pws_summary
   - group.wu_pws_comfort
