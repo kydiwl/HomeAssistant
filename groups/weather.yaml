@@ -62,12 +62,19 @@ wu_pws_weather_forecast:
   - sensor.pws_weather_4n
   - sensor.pws_weather_1h
   - sensor.pws_weather_6h
-
+  
+wu_radar:
+  name: Radar
+  entities:
+    - camera.animated_radar_raleigh
+    - camera.current_radar_raleigh
+    
 weather_tab:
   view: yes
   name: Weather
   entities:
   - group.sun_card
+  - group.wu_radar
   - group.wu_pws_weather_forecast
   - group.wu_pws_summary
   - group.wu_pws_comfort

@@ -17,6 +17,35 @@ homeassistant:
   # Notifications
   #notify: !include notify.yaml
 
+  
+################ INCLUDES ####################
+#                                            #
+#                                            #
+#                                            #
+##############################################
+group: !include_dir_merge_named groups
+automation: !include automations.yaml
+script: !include scripts.yaml
+panel_iframe: !include iframe.yaml
+#camera: !include_dir_merge_list cameras/
+sensor: !include_dir_merge_list sensors/
+notify: !include notify.yaml
+
+################ INTEGRATIONS ################
+#                                            #
+#                                            #
+#                                            #
+##############################################
+
+camera:
+  - platform: generic
+    still_image_url: 'https://icons.wxug.com/data/weather-maps/radar/united-states/charlotte-north-carolina-region-current-radar.gif'
+    name: Current Radar Raleigh
+    
+  - platform: generic
+    still_image_url: 'https://radblast.wunderground.com/cgi-bin/radar/WUNIDS_map?station=RDU&brand=wui&num=6&delay=15&type=TR0&frame=0&scale=1.000&noclutter=0&showstorms=0&mapx=400&mapy=240&centerx=400&centery=240&transx=0&transy=0&showlabels=1&severe=0&rainsnow=1&lightning=1&smooth=0&rand=25724043&lat=0&lon=0&label=you'
+    name: Animated Radar Raleigh
+
 # Show links to resources in log and frontend
 #introduction:
 
@@ -56,9 +85,6 @@ map:
 # Track the sun
 sun:
 
-# Sensors
-sensor: !include_dir_merge_list sensors
-
 # Text to speech
 tts:
   - platform: google
@@ -66,9 +92,6 @@ tts:
 # Cloud
 cloud:
 
-# Notifications
-notify: !include notify.yaml
-    
 # Hue lights hub
 hue:
   bridges:
@@ -92,11 +115,5 @@ http:
 #rachio:
 #  api_key: !secret rachio_api_key
 
-group: !include_dir_merge_named groups
-automation: !include automations.yaml
-script: !include scripts.yaml
-
-panel_iframe: !include iframe.yaml
-
-
     
+
