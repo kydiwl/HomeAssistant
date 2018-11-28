@@ -5,15 +5,6 @@
 #  friendly_name: Outdoor Humidity
 #  icon: mdi:water
 
-sensor.sunrise_time:
-  unit_of_measurement: AM
-sensor.sunset_time:
-  unit_of_measurement: PM
-sensor.sunrise_dawn:
-  unit_of_measurement: AM
-sensor.sunset_dusk:
-  unit_of_measurement: PM
-
 #sensor.pws_weather:
 #sensor.pws_temp_f:
 #sensor.pws_station_id:
