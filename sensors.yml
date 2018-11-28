@@ -14,6 +14,18 @@
     sunrise_time:
       value_template: '{% set timestamp = as_timestamp(states.sun.sun.attributes.next_rising) | timestamp_custom("%I:%M") %} {{ timestamp.lstrip("0") }}'
       friendly_name: "Sunrise"
+
+- platform: template
+  sensors:
+    sunset_dusk:
+      value_template: '{% set timestamp = as_timestamp(states.sun.sun.attributes.next_dusk) | timestamp_custom("%I:%M") %} {{ timestamp.lstrip("0") }}'
+      friendly_name: "Dusk"
+      
+- platform: template
+  sensors:
+    sunrise_dawn:
+      value_template: '{% set timestamp = as_timestamp(states.sun.sun.attributes.next_dawn) | timestamp_custom("%I:%M") %} {{ timestamp.lstrip("0") }}'
+      friendly_name: "Dawn"
       
 #### WEATHER ####################
 - platform: darksky
