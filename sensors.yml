@@ -1,7 +1,21 @@
+#### CLOCK ####################
 - platform: time_date
   display_options:
     - 'time'
+#### SUNRISE/SUNSET ####################
+- platform: template
+  sensors:
+    sunset_time:
+      value_template: '{% set timestamp = as_timestamp(states.sun.sun.attributes.next_setting) | timestamp_custom("%I:%M") %} {{ timestamp.lstrip("0") }}'
+      friendly_name: "Sunset"
 
+- platform: template
+  sensors:
+    sunrise_time:
+      value_template: '{% set timestamp = as_timestamp(states.sun.sun.attributes.next_rising) | timestamp_custom("%I:%M") %} {{ timestamp.lstrip("0") }}'
+      friendly_name: "Sunrise"
+      
+#### WEATHER ####################
 - platform: darksky
   api_key: !secret dark_sky_api_key 
   monitored_conditions:

@@ -1,10 +1,15 @@
-sensor.dark_sky_cloud_coverage:
-  friendly_name: Cloud Coverage
-  icon: mdi:cloud-outline
-sensor.dark_sky_humidity:
-  friendly_name: Outdoor Humidity
-  icon: mdi:water
-  
+#sensor.dark_sky_cloud_coverage:
+#  friendly_name: Cloud Coverage
+#  icon: mdi:cloud-outline
+#sensor.dark_sky_humidity:
+#  friendly_name: Outdoor Humidity
+#  icon: mdi:water
+
+sensor.sunrise_time:
+  unit_of_measurement: AM
+sensor.sunset_time:
+  unit_of_measurement: PM
+
 #sensor.pws_weather:
 #sensor.pws_temp_f:
 #sensor.pws_station_id:
