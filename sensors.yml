@@ -8,24 +8,44 @@
     sunset_time:
       value_template: '{% set timestamp = as_timestamp(states.sun.sun.attributes.next_setting) | timestamp_custom("%I:%M") %} {{ timestamp.lstrip("0") }}'
       friendly_name: "Sunset"
+      unit_of_measurement: PM
+      entity_picture_template: >- 
+        {% if true %}
+          /local/icons/weather/sunset.png
+        {% endif %}
 
 - platform: template
   sensors:
     sunrise_time:
       value_template: '{% set timestamp = as_timestamp(states.sun.sun.attributes.next_rising) | timestamp_custom("%I:%M") %} {{ timestamp.lstrip("0") }}'
       friendly_name: "Sunrise"
-
+      unit_of_measurement: AM
+      entity_picture_template: >- 
+        {% if true %}
+          /local/icons/weather/sunrise.png
+        {% endif %}
+      
 - platform: template
   sensors:
     sunset_dusk:
       value_template: '{% set timestamp = as_timestamp(states.sun.sun.attributes.next_dusk) | timestamp_custom("%I:%M") %} {{ timestamp.lstrip("0") }}'
       friendly_name: "Dusk"
+      unit_of_measurement: PM
+      entity_picture_template: >- 
+        {% if true %}
+          /local/icons/weather/dusk.png
+        {% endif %}
       
 - platform: template
   sensors:
     sunrise_dawn:
       value_template: '{% set timestamp = as_timestamp(states.sun.sun.attributes.next_dawn) | timestamp_custom("%I:%M") %} {{ timestamp.lstrip("0") }}'
       friendly_name: "Dawn"
+      unit_of_measurement: AM
+      entity_picture_template: >- 
+        {% if true %}
+          /local/icons/weather/dawn.png
+        {% endif %}
       
 #### WEATHER ####################
 - platform: darksky
