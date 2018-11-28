@@ -1,0 +1,5 @@
+media_tab:
+  name: Media
+  view: yes
+  entities:
+  - media_player.kyle_roku
