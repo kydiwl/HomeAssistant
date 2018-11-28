@@ -57,7 +57,7 @@ map:
 sun:
 
 # Sensors
-sensor: !include sensors.yml
+sensor: !include_dir_merge_list sensors
 
 # Text to speech
 tts:
