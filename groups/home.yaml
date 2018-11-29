@@ -1,0 +1,7 @@
+default_view:
+  view: yes
+  name: Home
+  entities:
+  - group.wu_radar
+  - group.wu_pws_weather_1d_forecast
+  - group.wu_pws_weather_4d_forecast
