@@ -46,4 +46,15 @@
       - weather_4d
       - weather_4n
       - weather_1h
+      - weather_2h
+      - weather_3h
+      - weather_4h
+      - weather_5h
       - weather_6h
+      - weather_12h
+      - weather_18h
+      - weather_24h
+      - wind_gust_1d_mph
+      - wind_1d_mph
+      - precip_1d_in
+      - precip_1d
