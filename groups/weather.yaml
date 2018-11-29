@@ -34,6 +34,8 @@ wu_pws_comfort:
 wu_pws_wind:
   name: Wind
   entities:
+  - sensor.pws_wind_gust_1d_mph
+  - sensor.pws_wind_1d_mph
   - sensor.pws_pressure_in
   - sensor.pws_pressure_mb
   - sensor.pws_pressure_trend
@@ -45,12 +47,14 @@ wu_pws_wind:
 wu_pws_precip:
   name: Precipitation
   entities:
+  - sensor.pws_precip_1d_in
+  - sensor.pws_precip_1d
   - sensor.pws_precip_1hr_in
   - sensor.pws_precip_today_in
   - sensor.pws_precip_today_string
 
-wu_pws_weather_forecast:
-  name: Forecast
+wu_pws_weather_4d_forecast:
+  name: 4 Day Forecast
   entities:
   - sensor.pws_weather_1d
   - sensor.pws_weather_1n
@@ -60,8 +64,19 @@ wu_pws_weather_forecast:
   - sensor.pws_weather_3n
   - sensor.pws_weather_4d
   - sensor.pws_weather_4n
+  
+wu_pws_weather_1d_forecast:
+  name: 1 Day Forecast
+  entities:
   - sensor.pws_weather_1h
+  - sensor.pws_weather_2h
+  - sensor.pws_weather_3h
+  - sensor.pws_weather_4h
+  - sensor.pws_weather_5h
   - sensor.pws_weather_6h
+  - sensor.pws_weather_12h
+  - sensor.pws_weather_18h
+  - sensor.pws_weather_24h
   
 wu_radar:
   name: Radar
@@ -75,7 +90,8 @@ weather_tab:
   entities:
   - group.sun_card
   - group.wu_radar
-  - group.wu_pws_weather_forecast
+  - group.wu_pws_weather_1d_forecast
+  - group.wu_pws_weather_4d_forecast
   - group.wu_pws_summary
   - group.wu_pws_comfort
   - group.wu_pws_precip
