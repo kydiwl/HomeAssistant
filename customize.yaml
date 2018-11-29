@@ -58,6 +58,14 @@ sensor.pws_solarradiation:
   entity_picture: /local/icons/weather/sun.png
 sensor.pws_alerts:
   entity_picture: /local/icons/common/exclamation-mark.png
+sensor.pws_wind_gust_1d_mph:
+  entity_picture: /local/icons/weather/wind-signal.png
+sensor.pws_wind_1d_mph:
+  entity_picture: /local/icons/weather/wind-signal.png
+sensor.pws_precip_1d_in:
+  entity_picture: /local/icons/weather/umbrella.png
+sensor.pws_precip_1d:
+  entity_picture: /local/icons/weather/umbrella.png
 #sensor.pws_weather_1d:
 #sensor.pws_weather_1n:
 #sensor.pws_weather_2d:
