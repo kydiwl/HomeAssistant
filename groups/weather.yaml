@@ -53,45 +53,11 @@ wu_pws_precip:
   - sensor.pws_precip_today_in
   - sensor.pws_precip_today_string
 
-wu_pws_weather_4d_forecast:
-  name: 4 Day Forecast
-  entities:
-  - sensor.pws_weather_1d
-  - sensor.pws_weather_1n
-  - sensor.pws_weather_2d
-  - sensor.pws_weather_2n
-  - sensor.pws_weather_3d
-  - sensor.pws_weather_3n
-  - sensor.pws_weather_4d
-  - sensor.pws_weather_4n
-  
-wu_pws_weather_1d_forecast:
-  name: 1 Day Forecast
-  entities:
-  - sensor.pws_weather_1h
-  - sensor.pws_weather_2h
-  - sensor.pws_weather_3h
-  - sensor.pws_weather_4h
-  - sensor.pws_weather_5h
-  - sensor.pws_weather_6h
-  - sensor.pws_weather_12h
-  - sensor.pws_weather_18h
-  - sensor.pws_weather_24h
-  
-wu_radar:
-  name: Radar
-  entities:
-    - camera.animated_radar_raleigh
-    - camera.current_radar_raleigh
-    
 weather_tab:
   view: yes
   name: Weather
   entities:
   - group.sun_card
-  - group.wu_radar
-  - group.wu_pws_weather_1d_forecast
-  - group.wu_pws_weather_4d_forecast
   - group.wu_pws_summary
   - group.wu_pws_comfort
   - group.wu_pws_precip
