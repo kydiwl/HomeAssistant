@@ -51,6 +51,7 @@
       - weather_4h
       - weather_5h
       - weather_6h
+      - weather_9h
       - weather_12h
       - weather_18h
       - weather_24h
@@ -58,3 +59,76 @@
       - wind_1d_mph
       - precip_1d_in
       - precip_1d
+
+- platform: template
+  sensors:
+    weather_1h_summary:
+      value_template: '{{ states.sensor.pws_weather_1h.state }} and {{ states.sensor.pws_weather_1h.attributes.temp_f|round }}F.  Winds {{ states.sensor.pws_weather_1h.attributes.wind_mph }}MPH.'
+      friendly_name_template: '{{ states.sensor.pws_weather_1h.attributes.friendly_name }}'
+      entity_picture_template: '{{ states.sensor.pws_weather_1h.attributes.entity_picture }}'
+
+- platform: template
+  sensors:
+    weather_2h_summary:
+      value_template: '{{ states.sensor.pws_weather_2h.state }} and {{ states.sensor.pws_weather_2h.attributes.temp_f|round }}F.  Winds {{ states.sensor.pws_weather_2h.attributes.wind_mph }}MPH.'
+      friendly_name_template: '{{ states.sensor.pws_weather_2h.attributes.friendly_name }}'
+      entity_picture_template: '{{ states.sensor.pws_weather_2h.attributes.entity_picture }}'
+
+- platform: template
+  sensors:
+    weather_3h_summary:
+      value_template: '{{ states.sensor.pws_weather_3h.state }} and {{ states.sensor.pws_weather_3h.attributes.temp_f|round }}F.  Winds {{ states.sensor.pws_weather_3h.attributes.wind_mph }}MPH.'
+      friendly_name_template: '{{ states.sensor.pws_weather_3h.attributes.friendly_name }}'
+      entity_picture_template: '{{ states.sensor.pws_weather_3h.attributes.entity_picture }}'
+
+- platform: template
+  sensors:
+    weather_4h_summary:
+      value_template: '{{ states.sensor.pws_weather_4h.state }} and {{ states.sensor.pws_weather_4h.attributes.temp_f|round }}F.  Winds {{ states.sensor.pws_weather_4h.attributes.wind_mph }}MPH.'
+      friendly_name_template: '{{ states.sensor.pws_weather_4h.attributes.friendly_name }}'
+      entity_picture_template: '{{ states.sensor.pws_weather_4h.attributes.entity_picture }}'
+
+- platform: template
+  sensors:
+    weather_5h_summary:
+      value_template: '{{ states.sensor.pws_weather_5h.state }} and {{ states.sensor.pws_weather_5h.attributes.temp_f|round }}F.  Winds {{ states.sensor.pws_weather_5h.attributes.wind_mph }}MPH.'
+      friendly_name_template: '{{ states.sensor.pws_weather_5h.attributes.friendly_name }}'
+      entity_picture_template: '{{ states.sensor.pws_weather_5h.attributes.entity_picture }}'
+
+- platform: template
+  sensors:
+    weather_6h_summary:
+      value_template: '{{ states.sensor.pws_weather_6h.state }} and {{ states.sensor.pws_weather_6h.attributes.temp_f|round }}F.  Winds {{ states.sensor.pws_weather_6h.attributes.wind_mph }}MPH.'
+      friendly_name_template: '{{ states.sensor.pws_weather_6h.attributes.friendly_name }}'
+      entity_picture_template: '{{ states.sensor.pws_weather_6h.attributes.entity_picture }}'
+
+- platform: template
+  sensors:
+    weather_9h_summary:
+      value_template: '{{ states.sensor.pws_weather_9h.state }} and {{ states.sensor.pws_weather_9h.attributes.temp_f|round }}F.  Winds {{ states.sensor.pws_weather_9h.attributes.wind_mph }}MPH.'
+      friendly_name_template: '{{ states.sensor.pws_weather_9h.attributes.friendly_name }}'
+      entity_picture_template: '{{ states.sensor.pws_weather_9h.attributes.entity_picture }}'
+
+- platform: template
+  sensors:
+    weather_12h_summary:
+      value_template: '{{ states.sensor.pws_weather_12h.state }} and {{ states.sensor.pws_weather_12h.attributes.temp_f|round }}F.  Winds {{ states.sensor.pws_weather_12h.attributes.wind_mph }}MPH.'
+      friendly_name_template: '{{ states.sensor.pws_weather_12h.attributes.friendly_name }}'
+      entity_picture_template: '{{ states.sensor.pws_weather_12h.attributes.entity_picture }}'
+
+- platform: template
+  sensors:
+    weather_18h_summary:
+      value_template: '{{ states.sensor.pws_weather_18h.state }} and {{ states.sensor.pws_weather_18h.attributes.temp_f|round }}F.  Winds {{ states.sensor.pws_weather_18h.attributes.wind_mph }}MPH.'
+      friendly_name_template: '{{ states.sensor.pws_weather_18h.attributes.friendly_name }}'
+      entity_picture_template: '{{ states.sensor.pws_weather_18h.attributes.entity_picture }}'
+
+- platform: template
+  sensors:
+    weather_24h_summary:
+      value_template: '{{ states.sensor.pws_weather_24h.state }} and {{ states.sensor.pws_weather_24h.attributes.temp_f|round }}F.  Winds {{ states.sensor.pws_weather_24h.attributes.wind_mph }}MPH.'
+      friendly_name_template: '{{ states.sensor.pws_weather_24h.attributes.friendly_name }}'
+      entity_picture_template: '{{ states.sensor.pws_weather_24h.attributes.entity_picture }}'
+
+
+      

@@ -1,7 +1,39 @@
+custom_weather_1d_forecast:
+  name: Hourly Forecast
+  entities:
+    - sensor.weather_1h_summary
+    - sensor.weather_2h_summary
+    - sensor.weather_3h_summary
+    - sensor.weather_4h_summary
+    - sensor.weather_5h_summary
+    - sensor.weather_6h_summary
+    - sensor.weather_9h_summary
+    - sensor.weather_12h_summary
+    - sensor.weather_18h_summary
+    - sensor.weather_24h_summary
+
+wu_pws_weather_4d_forecast:
+  name: Daily Forecast
+  entities:
+  - sensor.pws_weather_1d
+  - sensor.pws_weather_1n
+  - sensor.pws_weather_2d
+  - sensor.pws_weather_2n
+  - sensor.pws_weather_3d
+  - sensor.pws_weather_3n
+  - sensor.pws_weather_4d
+  - sensor.pws_weather_4n
+  
+wu_radar:
+  name: Radar
+  entities:
+    - camera.animated_radar_raleigh
+    - camera.current_radar_raleigh
+    
 default_view:
   view: yes
   name: Home
   entities:
   - group.wu_radar
-  - group.wu_pws_weather_1d_forecast
+  - group.custom_weather_1d_forecast
   - group.wu_pws_weather_4d_forecast
