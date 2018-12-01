@@ -16,9 +16,9 @@ homeassistant:
   packages: !include_dir_named packages
 
   
-################ INCLUDES ####################
+##############################################
 #                                            #
-#                                            #
+#               INCLUDES                     #
 #                                            #
 ##############################################
 group: !include_dir_merge_named groups
@@ -28,10 +28,11 @@ panel_iframe: !include iframe.yaml
 camera: !include devices/cameras.yaml
 sensor: !include_dir_merge_list sensors/
 notify: !include notify.yaml
+android_ip_webcam: !include devices/android_ip_webcam.yaml
 
-################ INTEGRATIONS ################
+##############################################
 #                                            #
-#                                            #
+#              INTEGRATIONS                  #
 #                                            #
 ##############################################
 
@@ -85,7 +86,7 @@ cloud:
 hue:
   bridges:
     - host: !secret hue_hub_addr
-
+    
 # Telegram messaging
 telegram_bot:
   - platform: polling
@@ -99,10 +100,3 @@ http:
   ssl_certificate: !secret dehydrate_ssl_cert_path
   ssl_key: !secret dehydrate_ssl_key_path
   base_url: !secret dyn_dns_addr
-
-# Rachio irrigation controller switch
-#rachio:
-#  api_key: !secret rachio_api_key
-
-    
-
