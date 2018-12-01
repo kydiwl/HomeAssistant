@@ -6,13 +6,25 @@ family_room_lights:
 porch_lights:
   name: Porch Lights
   entities:
-  - light.hue_garage_door_left
-  - light.hue_garage_door_right
   - light.hue_front_porch
 
+garage_door_lights:
+  name: Garage Door Lights
+  entities:
+  - light.hue_garage_door_left
+  - light.hue_garage_door_right  
+
+outside_lights:
+  name: All Outside Lights
+  entities:
+  - group.porch_lights
+  - group.garage_door_lights
+  
 lights_tab:
   view: yes
   name: Lights
   entities:
   - group.family_room_lights
   - group.porch_lights
+  - group.garage_door_lights
+  - light.outside_light_group
