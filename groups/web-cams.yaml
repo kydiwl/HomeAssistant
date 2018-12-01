@@ -1,0 +1,15 @@
+kitchen_camera:
+  name: Web Cams
+  entities:
+  - camera.kitchen
+  - switch.kitchen_night_vision
+  - switch.kitchen_focus
+  - sensor.kitchen_battery_level
+  - sensor.kitchen_battery_temperature
+
+    
+web_cams_tab:
+  view: yes
+  name: Web Cams
+  entities:
+  - group.kitchen_camera
