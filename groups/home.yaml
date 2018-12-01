@@ -27,9 +27,9 @@ wu_pws_weather_4d_forecast:
 wu_radar:
   name: Radar
   entities:
-    - camera.animated_radar_raleigh
-    - camera.current_radar_raleigh
-    
+    - camera.raleigh_radar
+    - camera.raleigh_satellite
+
 default_view:
   view: yes
   name: Home
@@ -37,3 +37,4 @@ default_view:
   - group.wu_radar
   - group.custom_weather_1d_forecast
   - group.wu_pws_weather_4d_forecast
+  
