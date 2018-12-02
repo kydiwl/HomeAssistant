@@ -1,5 +1,5 @@
 - host: 192.168.1.87
-  name: kitchen
+  name: Kitchen Camera
 #  port: 8000
   sensors:
     - audio_connections
@@ -11,7 +11,7 @@
 #    - pressure
 #    - proximity
 #    - sound
-#    - video_connections
+    - video_connections
   switches:
 #    - exposure_lock
 #    - ffc
