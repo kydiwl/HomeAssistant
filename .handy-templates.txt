@@ -1,0 +1,3 @@
+{% for e in states.sensor if not e.entity_id.startswith('sensor.dark_sky') %}
+      - {{ e.entity_id }}
+{%- endfor %}
