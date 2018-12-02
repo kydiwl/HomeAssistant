@@ -1,7 +1,7 @@
 kitchen_camera:
   name: Web Cams
   entities:
-  - camera.kitchen
+  - camera.kitchen_camera
   - switch.kitchen_night_vision
   - switch.kitchen_focus
   - sensor.kitchen_battery_level
