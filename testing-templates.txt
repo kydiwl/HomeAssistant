@@ -1,0 +1,5 @@
+
+# Find entities that start with XXX
+{% for e in states.sensor if e.entity_id.startswith('XXX') %}
+      - {{ e.entity_id }}
+{%- endfor %}
