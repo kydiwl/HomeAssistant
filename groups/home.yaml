@@ -33,7 +33,7 @@ wu_radar:
 android_kitchen_camera:
   name: kitchen_camera
   entities:
-  - camera.my_android_camera
+   camera.my_android_camera
 
 default_view:
   view: yes
