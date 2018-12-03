@@ -1,0 +1,45 @@
+- platform: systemmonitor
+  resources:
+  - type: disk_use_percent
+    arg: "/"
+  - type: disk_use
+    arg: "/"
+  - type: disk_free
+    arg: "/"
+  - type: memory_free
+  - type: memory_use_percent
+  - type: memory_use
+  - type: swap_use_percent
+  - type: swap_use
+  - type: swap_free
+  - type: load_1m
+  - type: load_5m
+  - type: load_15m
+  - type: network_in
+#    arg: 'epair8b'
+  - type: network_out
+#    arg: 'epair8b'
+  - type: packets_in
+#    arg: epair8b
+  - type: packets_out
+#    arg: epair8b
+  - type: ipv4_address
+#    arg: epair8b
+  - type: ipv6_address
+#    arg: epair8b
+  - type: processor_use
+  - type: process
+  - type: last_boot
+  - type: since_last_boot
+
+## Template to get System Network information  
+#- platform: template
+#    sensors:
+#    sunset_time:
+#      value_template: '{% set timestamp = as_timestamp(states.sun.sun.attributes.next_setting) | timestamp_custom("%I:%M") %} {{ timestamp.lstrip("0") }}'
+#      friendly_name: '{{ states.sensor.ipv4_address.attributes.friendly_name }}'
+#      entity_picture_template: >- 
+#        {% if true %}
+#          /local/icons/computer/server.png
+3        {% endif %}
+

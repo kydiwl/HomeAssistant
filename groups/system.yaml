@@ -1,0 +1,51 @@
+system_memory:
+  name: Memory
+  entities:
+  - sensor.memory_free
+  - sensor.memory_use
+  - sensor.memory_use_percent
+
+system_disk:
+  name: Disk
+  entities:
+  - sensor.disk_use_percent_
+  - sensor.disk_free_
+  - sensor.disk_use_
+  - sensor.swap_free
+  - sensor.swap_use
+  - sensor.swap_use_percent
+  
+system_network:
+  name: Network
+  entities:
+  - sensor.ipv4_address
+  - sensor.ipv6_address
+  - sensor.network_in
+  - sensor.network_out
+  - sensor.packets_in
+  - sensor.packets_out
+
+system_system:
+  name: System
+  entities:
+  - sensor.last_boot
+  - sensor.since_last_boot
+  - sensor.load_1m
+  - sensor.load_5m
+  - sensor.load_15m
+  - sensor.process
+
+system_processor:
+  name: CPU
+  entities:
+  - sensor.processor_use
+
+system_tab:
+  view: yes
+  name: System
+  entities:
+  - group.system_memory
+  - group.system_disk
+  - group.system_network
+  - group.system_system
+  - group.system_processor
