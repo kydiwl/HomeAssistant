@@ -1,5 +1,14 @@
+kyle_lg_tv:
+  name: Kyles TV
+  entities:
+    - media_player.kyles_tv
+  
+
+
 media_tab:
   name: Media
   view: yes
   entities:
   - media_player.kyle_roku
+  - group.kyle_lg_tv
+  
