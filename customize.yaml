@@ -1,21 +1,58 @@
-#sensor.dark_sky_cloud_coverage:
-#  friendly_name: Cloud Coverage
-#  icon: mdi:cloud-outline
-#sensor.dark_sky_humidity:
-#  friendly_name: Outdoor Humidity
-#  icon: mdi:water
+# SYSTEM DISK
+sensor.disk_use_percent_:
+  entity_picture: /local/icons/computer/disk.png
+sensor.disk_free_:
+  entity_picture: /local/icons/computer/disk.png
+sensor.disk_use_:
+  entity_picture: /local/icons/computer/disk.png
+sensor.swap_free:
+  entity_picture: /local/icons/computer/disk.png
+sensor.swap_use:
+  entity_picture: /local/icons/computer/disk.png
+sensor.swap_use_percent:
+  entity_picture: /local/icons/computer/disk.png
 
-#sensor.pws_weather:
-sensor.pws_temp_f:
-  entity_picture: /local/icons/weather/thermometer.png
-sensor.pws_station_id:
-  entity_picture: /local/icons/common/satellite-station.png
-sensor.pws_elevation:
-  entity_picture: /local/icons/common/isobars.png
-sensor.pws_location:
-  entity_picture: /local/icons/common/pin.png
-sensor.pws_observation_time:
+# SYSTEM SYSTEM
+sensor.last_boot:
   entity_picture: /local/icons/common/circular-clock.png
+sensor.since_last_boot:
+  entity_picture: /local/icons/common/circular-clock.png
+sensor.load_1m:
+  entity_picture: /local/icons/computer/cpu.png
+sensor.load_5m:
+  entity_picture: /local/icons/computer/cpu.png
+sensor.load_15m:
+  entity_picture: /local/icons/computer/cpu.png
+sensor.process:
+  entity_picture: /local/icons/computer/cpu.png
+
+# SYSTEM MEMORY
+sensor.memory_free:
+  entity_picture: /local/icons/computer/memory.png
+sensor.memory_use:
+  entity_picture: /local/icons/computer/memory.png
+sensor.memory_use_percent:
+  entity_picture: /local/icons/computer/memory.png
+
+# SYSTEM NETWORk
+sensor.ipv4_address:
+  entity_picture: /local/icons/computer/server.png
+sensor.ipv6_address:
+  entity_picture: /local/icons/computer/server.png
+sensor.network_in:
+  entity_picture: /local/icons/computer/server.png
+sensor.network_out:
+  entity_picture: /local/icons/computer/server.png
+sensor.packets_in:
+  entity_picture: /local/icons/computer/server.png
+sensor.packets_out:
+  entity_picture: /local/icons/computer/server.png
+
+# SYSTEM PROCESSOR
+sensor.processor_use:
+  entity_picture: /local/icons/computer/cpu.png
+
+# WEATHER COMFORT
 sensor.pws_feelslike_f:
   entity_picture: /local/icons/weather/thermometer.png
 sensor.pws_feelslike_string:
@@ -28,51 +65,59 @@ sensor.pws_dewpoint_f:
   entity_picture: /local/icons/weather/thermometer.png
 sensor.pws_dewpoint_string:
   entity_picture: /local/icons/weather/thermometer.png
-sensor.pws_wind_mph:
-  entity_picture: /local/icons/weather/wind-signal.png
+sensor.pws_relative_humidity:
+  entity_picture: /local/icons/weather/thermometer.png
 sensor.pws_UV:
   entity_picture: /local/icons/weather/sun.png
-sensor.pws_pressure_in:
-  entity_picture: /local/icons/weather/gauge.png
-sensor.pws_pressure_mb:
-  entity_picture: /local/icons/weather/gauge.png
-sensor.pws_pressure_trend:
-  entity_picture: /local/icons/common/line-graph.png
-sensor.pws_wind_dir:
-  entity_picture: /local/icons/common/compass.png
-sensor.pws_wind_degrees:
-  entity_picture: /local/icons/common/compass.png
-sensor.pws_wind_string:
-  entity_picture: /local/icons/weather/wind-signal.png
-sensor.pws_relative_humidity:
-  entity_picture: /local/icons/weather/humidity.png
-sensor.pws_visibility_mi:
-  entity_picture: /local/icons/common/binoculars.png
+
+# WEATHER PRECIPITATION
 sensor.pws_precip_1hr_in:
   entity_picture: /local/icons/weather/umbrella.png
 sensor.pws_precip_today_in:
   entity_picture: /local/icons/weather/umbrella.png
 sensor.pws_precip_today_string:
   entity_picture: /local/icons/weather/umbrella.png
-sensor.pws_solarradiation:
-  entity_picture: /local/icons/weather/sun.png
-sensor.pws_alerts:
-  entity_picture: /local/icons/common/exclamation-mark.png
-sensor.pws_wind_gust_1d_mph:
-  entity_picture: /local/icons/weather/wind-signal.png
-sensor.pws_wind_1d_mph:
-  entity_picture: /local/icons/weather/wind-signal.png
 sensor.pws_precip_1d_in:
   entity_picture: /local/icons/weather/umbrella.png
 sensor.pws_precip_1d:
   entity_picture: /local/icons/weather/umbrella.png
-#sensor.pws_weather_1d:
-#sensor.pws_weather_1n:
-#sensor.pws_weather_2d:
-#sensor.pws_weather_2n:
-#sensor.pws_weather_3d:
-#sensor.pws_weather_3n:
-#sensor.pws_weather_4d:
-#sensor.pws_weather_4n:
-#sensor.pws_weather_1h:
-#sensor.pws_weather_6h:
+
+# WEATHER SUN
+
+# WEATHER WIND
+sensor.pws_wind_gust_1d_mph:
+  entity_picture: /local/icons/weather/wind.png
+sensor.pws_wind_1d_mph:
+  entity_picture: /local/icons/weather/wind.png
+sensor.pws_pressure_in:
+  entity_picture: /local/icons/weather/gauge.png
+sensor.pws_pressure_mb:
+  entity_picture: /local/icons/weather/gauge.png
+sensor.pws_pressure_trend:
+  entity_picture: /local/icons/common/line-graph.png
+sensor.pws_wind_mph:
+  entity_picture: /local/icons/weather/wind.png
+sensor.pws_wind_dir:
+  entity_picture: /local/icons/common/compass.png
+sensor.pws_wind_degrees:
+  entity_picture: /local/icons/common/compass.png
+sensor.pws_wind_string:
+  entity_picture: /local/icons/weather/wind.png
+
+# WEATHER SUMMARY
+sensor.pws_temp_f:
+  entity_picture: /local/icons/weather/thermometer.png
+sensor.pws_station_id:
+  entity_picture: /local/icons/common/satellite-station.png
+sensor.pws_elevation:
+  entity_picture: /local/icons/common/mountains.png
+sensor.pws_location:
+  entity_picture: /local/icons/common/pin.png
+sensor.pws_observation_time:
+  entity_picture: /local/icons/common/circular-clock.png
+sensor.pws_visibility_mi:
+  entity_picture: /local/icons/common/binoculars.png
+sensor.pws_solarradiation:
+  entity_picture: /local/icons/weather/sun.png
+sensor.pws_alerts:
+  entity_picture: /local/icons/common/exclamation-mark.png
