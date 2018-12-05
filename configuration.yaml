@@ -29,6 +29,7 @@ camera: !include devices/cameras.yaml
 sensor: !include_dir_merge_list sensors/
 notify: !include notify.yaml
 android_ip_webcam: !include devices/android_ip_webcam.yaml
+history_graph: !include history-graphs.yaml
 
 ##############################################
 #                                            #
@@ -102,7 +103,6 @@ history:
       - sensor.load_5m
       - sensor.load_15m
       - sensor.processor_use
-
 
 # View all events in a logbook
 logbook:
