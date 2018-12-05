@@ -1,5 +1,27 @@
-
+#######################
+#                     #
+#        JINJA        #
+#                     #
+#######################
 # Find entities that start with XXX
 {% for e in states.sensor if e.entity_id.startswith('XXX') %}
       - {{ e.entity_id }}
 {%- endfor %}
+
+#######################
+#                     #
+#       SQLITE        #
+#                     #
+#######################
+# Get states
+select state, last_changed from states where entity_id = 'sensor.cpu7_temp' and last_changed BETWEEN strftime('%Y-%m-%d %H:%M:%SS.SSS', datetime('now','localtime'), '-1 day') AND strftime('%Y-%m-%d %H:%M:%SS.SSS',datetime('now','localtime'));
+
+
+
+
+#######################
+#                     #
+#       COMMANDS      #
+#                     #
+#######################
+hass --script check_config -c /home/.homeassistant/
