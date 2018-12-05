@@ -19,7 +19,6 @@ system_network:
   name: Network
   entities:
   - sensor.ipv4_address
-  - sensor.ipv6_address
   - sensor.network_in
   - sensor.network_out
   - sensor.packets_in
@@ -44,6 +43,7 @@ system_tab:
   view: yes
   name: System
   entities:
+  - history_graph.cpu_temps
   - group.system_memory
   - group.system_disk
   - group.system_network
