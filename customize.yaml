@@ -51,22 +51,38 @@ sensor.packets_out:
 # SYSTEM PROCESSOR
 sensor.processor_use:
   entity_picture: /local/icons/computer/cpu.png
-
+sensor.cpu0_temp:
+  entity_picture: /local/icons/common/thermometer.png
+sensor.cpu1_temp:
+  entity_picture: /local/icons/common/thermometer.png
+sensor.cpu2_temp:
+  entity_picture: /local/icons/common/thermometer.png
+sensor.cpu3_temp:
+  entity_picture: /local/icons/common/thermometer.png
+sensor.cpu4_temp:
+  entity_picture: /local/icons/common/thermometer.png
+sensor.cpu5_temp:
+  entity_picture: /local/icons/common/thermometer.png
+sensor.cpu6_temp:
+  entity_picture: /local/icons/common/thermometer.png
+sensor.cpu7_temp:
+  entity_picture: /local/icons/common/thermometer.png
+  
 # WEATHER COMFORT
 sensor.pws_feelslike_f:
-  entity_picture: /local/icons/weather/thermometer.png
+  entity_picture: /local/icons/common/thermometer.png
 sensor.pws_feelslike_string:
-  entity_picture: /local/icons/weather/thermometer.png
+  entity_picture: /local/icons/common/thermometer.png
 sensor.pws_heat_index_f:
-  entity_picture: /local/icons/weather/thermometer.png
+  entity_picture: /local/icons/common/thermometer.png
 sensor.pws_heat_index_string:
-  entity_picture: /local/icons/weather/thermometer.png
+  entity_picture: /local/icons/common/thermometer.png
 sensor.pws_dewpoint_f:
-  entity_picture: /local/icons/weather/thermometer.png
+  entity_picture: /local/icons/common/thermometer.png
 sensor.pws_dewpoint_string:
-  entity_picture: /local/icons/weather/thermometer.png
+  entity_picture: /local/icons/common/thermometer.png
 sensor.pws_relative_humidity:
-  entity_picture: /local/icons/weather/thermometer.png
+  entity_picture: /local/icons/common/thermometer.png
 sensor.pws_UV:
   entity_picture: /local/icons/weather/sun.png
 
@@ -106,7 +122,7 @@ sensor.pws_wind_string:
 
 # WEATHER SUMMARY
 sensor.pws_temp_f:
-  entity_picture: /local/icons/weather/thermometer.png
+  entity_picture: /local/icons/common/thermometer.png
 sensor.pws_station_id:
   entity_picture: /local/icons/common/satellite-station.png
 sensor.pws_elevation:
