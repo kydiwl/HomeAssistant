@@ -43,9 +43,10 @@ system_tab:
   view: yes
   name: System
   entities:
-  - history_graph.cpu_temps
   - group.system_memory
   - group.system_disk
   - group.system_network
   - group.system_system
   - group.system_processor
+  - history_graph.cpu_temp_0
+  - history_graph.cpu_temp_4
