@@ -63,8 +63,8 @@
 - platform: command_line
   name: cpu4 Temp
   command: "/sbin/sysctl dev.cpu | grep dev.cpu.4.temperature | /usr/bin/awk -F ':' '{ print $2 }'"
-
   unit_of_measurement: "°C"
+
 - platform: command_line
   name: cpu5 Temp
   command: "/sbin/sysctl dev.cpu | grep dev.cpu.5.temperature | /usr/bin/awk -F ':' '{ print $2 }'"
