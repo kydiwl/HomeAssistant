@@ -1,10 +1,15 @@
-cpu_temps:
-  name: CPU Temps
+cpu_temp0:
+  name: CPU Temp 0
   entities:
     - sensor.cpu0_temp
     - sensor.cpu1_temp
     - sensor.cpu2_temp
     - sensor.cpu3_temp
+  refresh: 60
+
+cpu_temp4:
+  name: CPU Temp 4
+  entities:
     - sensor.cpu4_temp
     - sensor.cpu5_temp
     - sensor.cpu6_temp
