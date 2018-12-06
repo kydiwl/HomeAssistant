@@ -50,6 +50,13 @@ views:
           - sensor.pws_weather_4d
           - sensor.pws_weather_4n          
           
+      - title: Web Links
+        type: entities
+        entities:
+          - type: weblink
+            url: https://www.mynexia.com/login
+            icon: mdi:thermostat
+            name: mynexia
           
   - title: weather
     icon: mdi:cloud-outline
