@@ -185,6 +185,54 @@ views:
         type: entities
         entities:
           - sensor.processor_use
+
+      - title: CPU 0 Temp
+        type: history-graph
+        entities:
+          - sensor.cpu0_temp
+        refresh_interval: 60
+          
+      - title: CPU 1 Temp
+        type: history-graph
+        entities:
+          - sensor.cpu1_temp
+        refresh_interval: 60
+          
+      - title: CPU 2 Temp
+        type: history-graph
+        entities:
+          - sensor.cpu2_temp
+        refresh_interval: 60
+          
+      - title: CPU 3 Temp
+        type: history-graph
+        entities:
+          - sensor.cpu3_temp
+        refresh_interval: 60
+          
+      - title: CPU 4 Temp
+        type: history-graph
+        entities:
+          - sensor.cpu4_temp
+        refresh_interval: 60
+          
+      - title: CPU 5 Temp
+        type: history-graph
+        entities:
+          - sensor.cpu5_temp
+        refresh_interval: 60
+          
+      - title: CPU 6 Temp
+        type: history-graph
+        entities:
+          - sensor.cpu6_temp
+        refresh_interval: 60
+          
+      - title: CPU 7 Temp
+        type: history-graph
+        entities:
+          - sensor.cpu7_temp
+        refresh_interval: 60
           
   - title: web cams
     icon: mdi:camcorder
