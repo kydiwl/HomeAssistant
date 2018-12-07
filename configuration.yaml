@@ -45,7 +45,8 @@ history_graph: !include history-graphs.yaml
 
 # Enables the frontend
 frontend:
-
+  javascript_version: auto
+  
 # Enables configuration UI
 config:
 
