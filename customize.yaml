@@ -85,6 +85,7 @@ sensor.pws_relative_humidity:
   entity_picture: /local/icons/common/thermometer.png
 sensor.pws_UV:
   entity_picture: /local/icons/weather/sun.png
+#  unit_of_measurement: 'mJ/cm2'
 
 # WEATHER PRECIPITATION
 sensor.pws_precip_1hr_in:
