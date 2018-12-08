@@ -39,6 +39,16 @@ system_processor:
   entities:
   - sensor.processor_use
 
+system_cpu_temps:
+  - history_graph.cpu_temp_0
+  - history_graph.cpu_temp_1
+  - history_graph.cpu_temp_2
+  - history_graph.cpu_temp_3
+  - history_graph.cpu_temp_4
+  - history_graph.cpu_temp_5
+  - history_graph.cpu_temp_6
+  - history_graph.cpu_temp_7
+
 system_tab:
   view: yes
   name: System
@@ -48,5 +58,5 @@ system_tab:
   - group.system_network
   - group.system_system
   - group.system_processor
-  - history_graph.cpu_temp_0
-  - history_graph.cpu_temp_4
+#  - history_graph.cpu_temp_0
+#  - history_graph.cpu_temp_4
