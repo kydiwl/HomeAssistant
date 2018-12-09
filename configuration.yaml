@@ -37,12 +37,22 @@ history_graph: !include history-graphs.yaml
 #                                            #
 ##############################################
 
-# Show links to resources in log and frontend
+# Show links to resources in lo and frontend
 #introduction:
 
 # Enables running python scripts
 #python_script:
 
+mqtt:
+  broker: 192.168.1.108
+
+device_tracker:
+  - platform: owntracks
+    max_gps_accuracy: 50
+    waypoints: true
+    mqtt_topic: "owntracks/#"
+    events_only: false
+      
 # Enables the frontend
 frontend:
   javascript_version: auto
