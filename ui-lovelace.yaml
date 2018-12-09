@@ -1,3 +1,6 @@
+#resources:
+#  - url: /local/upcoming-media-card.js
+#    type: js
 views:
   - title: main
     icon: mdi:home-outline
@@ -248,20 +251,30 @@ views:
               - light.hue_garage_door_left
               - light.hue_garage_door_right  
 
-      - title: All Outside Lights
-        type: entities
-        entities:
-          - group.porch_lights
-          - group.garage_door_lights
+  #      - title: All Outside Lights
+  #        type: entities
+  #        entities:
+  #          - group.porch_lights
+  #          - group.garage_door_lights
       
   - title: media
     icon: mdi:television
     cards:
+#      - type: custom:upcoming-media-card
+#        entity: sensor.sonarr_upcoming
+#        max: 5
+
       - title: Kyles TV
         type: entities
         entities:
           - media_player.kyles_tv
           - media_player.kyle_roku
+      - title: Sonarr
+        type: glance
+        entities:
+          - sensor.sonarr_upcoming
+          - sensor.sonarr_queue
+        
   - title: system
     icon: mdi:desktop-tower
     cards:
@@ -354,8 +367,8 @@ views:
           - sensor.cpu7_temp
         refresh_interval: 60
           
-  - title: web cams
-    icon: mdi:camcorder
+#  - title: web cams
+#    icon: mdi:camcorder
 #    cards:
 #      - title: Web Cams
 #        type: picture-glance
