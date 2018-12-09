@@ -12,44 +12,56 @@ views:
               - type: markdown
                 content: >
                   ## Current Conditions
-              - type: entities
-                entities:
-                  - sensor.pws_alerts
-              - type: entities
-                entities:
-                  - sensor.pws_temp_f
-              - type: entities
-                entities:
-                  - sensor.pws_relative_humidity
-              - type: entities
-                entities:
-                  - sensor.pws_dewpoint_f
-              - type: entities
-                entities:
-                  - sensor.pws_feelslike_f
-              - type: entities
-                entities:
-                  - sensor.pws_heat_index_f
-              - type: entities
-                entities:
-                  - sensor.pws_wind_mph
-              - type: entities
-                entities:
-                  - sensor.pws_wind_dir
-              - type: entities
-                entities:
-                  - sensor.pws_wind_string
-              - type: entities
-                entities:
-                  - sensor.pws_visibility_mi
-              - type: entities
-                entities:
-                  - sensor.pws_solarradiation
-              - type: entity-filter
-                entities:
-                  - sensor.pws_UV
-                state_filter:
-                  - 'unavailable'
+                  ## Current Conditions
+              - type: horizontal-stack
+                cards:
+                - type: glance
+                  entities:
+                    - sensor.pws_alerts
+                - type: glance
+                  entities:
+                    - sensor.pws_temp_f
+                - type: glance
+                  entities:
+                    - sensor.pws_relative_humidity
+              - type: horizontal-stack
+                cards:
+                - type: glance
+                  entities:
+                    - sensor.pws_dewpoint_f
+                - type: glance
+                  entities:
+                    - sensor.pws_feelslike_f
+                - type: glance
+                  entities:
+                    - sensor.pws_heat_index_f
+              - type: horizontal-stack
+                cards:
+                - type: glance
+                  entities:
+                    - sensor.pws_wind_mph
+                - type: glance
+                  entities:
+                    - sensor.pws_wind_dir
+                - type: glance
+                  entities:
+                    - sensor.pws_wind_string
+              - type: horizontal-stack
+                cards:
+                - type: glance
+                  entities:
+                    - sensor.pws_visibility_mi
+                - type: glance
+                  entities:
+                    - sensor.pws_solarradiation
+                - type: conditional
+                  conditions:
+                    - entity: sensor.pws_UV
+                      state_not: 'unavailable'
+                  card:
+                    type: glance
+                    entities:
+                      - sensor.pws_UV
                   
           - type: vertical-stack
             cards:
