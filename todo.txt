@@ -1,2 +1,8 @@
 NODE RED
 configurator
+
+
+customize_domain:
+    light:
+      icon: mdi:home
+SET entity picture to a light bulb but change color based on light color
