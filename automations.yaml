@@ -57,3 +57,51 @@
   - data:
       entity_id: group.garage_door_lights
     service: light.turn_off
+- id: '1544367955335'
+  alias: Target Reminder
+  trigger:
+  - entity_id: device_tracker.kyle_kylephone
+    event: enter
+    platform: zone
+    zone: zone.target_southpoint
+  condition: []
+  action:
+  - data:
+      message: Check Target List
+    service: telegram_bot.send_message
+- id: '1544368039706'
+  alias: Harris Teeter Reminder
+  trigger:
+  - entity_id: device_tracker.kyle_kylephone
+    event: enter
+    platform: zone
+    zone: zone.harris_teeter
+  condition: []
+  action:
+  - data:
+      message: Check Grocery List
+    service: telegram_bot.send_message
+- id: '1544373909746'
+  alias: Turn ON Tv when I get home
+  trigger:
+  - entity_id: device_tracker.kyle_kylephone
+    event: enter
+    platform: zone
+    zone: zone.home
+  condition: []
+  action:
+  - data:
+      entity_id: media_player.kyles_tv
+    service: homeassistant.turn_on
+- id: '1544374019580'
+  alias: Turn OFF Tv when I leave
+  trigger:
+  - entity_id: device_tracker.kyle_kylephone
+    event: leave
+    platform: zone
+    zone: zone.home
+  condition: []
+  action:
+  - data:
+      entity_id: media_player.kyles_tv
+    service: automation.turn_off
