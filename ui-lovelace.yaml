@@ -12,7 +12,6 @@ views:
               - type: markdown
                 content: >
                   ## Current Conditions
-                  ## Current Conditions
               - type: horizontal-stack
                 cards:
                 - type: glance
@@ -226,22 +225,28 @@ views:
           
   - title: lights
     icon: mdi:lightbulb-outline
+    panel: true
     cards:
-      - title: Family Room Lights
-        type: entities
-        entities:
-          - light.hue_family_room_nightlight
-      
-      - title: Porch Lights
-        type: entities
-        entities:
-          - light.hue_front_porch
+      - type: vertical-stack
+        cards:
+        - type: glance
+          entities:
+            - entity: sensor.time
 
-      - title: Garage Door Lights
-        type: entities
-        entities:
-          - light.hue_garage_door_left
-          - light.hue_garage_door_right  
+        - type: horizontal-stack
+          cards:
+          - type: glance
+            entities:
+              - light.hue_family_room_nightlight
+          
+          - type: glance
+            entities:
+              - light.hue_front_porch
+
+          - type: glance
+            entities:
+              - light.hue_garage_door_left
+              - light.hue_garage_door_right  
 
       - title: All Outside Lights
         type: entities
