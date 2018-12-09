@@ -1,3 +1,7 @@
+# OTHER 
+sensor.time:
+  entity_picture: /local/icons/common/circular-clock.png
+
 # SYSTEM DISK
 sensor.disk_use_percent_:
   entity_picture: /local/icons/computer/disk.png
