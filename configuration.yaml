@@ -30,6 +30,7 @@ sensor: !include_dir_merge_list sensors/
 notify: !include notify.yaml
 android_ip_webcam: !include devices/android_ip_webcam.yaml
 history_graph: !include history-graphs.yaml
+zone: !include zones.yaml
 
 ##############################################
 #                                            #
@@ -44,7 +45,7 @@ history_graph: !include history-graphs.yaml
 #python_script:
 
 mqtt:
-  broker: 192.168.1.108
+  broker: !secret mqtt_broker_addr
 
 device_tracker:
   - platform: owntracks
