@@ -1,0 +1,7 @@
+- platform: sonarr
+  api_key: !secret sonarr_api_key
+  host: !secret sonarr_addr
+  monitored_conditions:
+    - upcoming
+    - queue
+  days: 7
