@@ -1,24 +1,24 @@
-- host: 192.168.1.87
+- host: !secret kitchen_ip_camera_addr
   name: Kitchen Camera
-#  port: 8000
+  port: !secret kitchen_ip_camera_port
   sensors:
     - audio_connections
     - battery_level
     - battery_temp
-#    - battery_voltage
-#    - light
-#    - motion
-#    - pressure
-#    - proximity
-#    - sound
+    - battery_voltage
+    - light
+    - motion
+    - pressure
+    - proximity
+    - sound
     - video_connections
   switches:
-#    - exposure_lock
-#    - ffc
+    - exposure_lock
+    - ffc
     - focus
-#    - gps_active
+    - gps_active
     - night_vision
-#    - overlay
-#    - torch
-#    - whitebalance_lock
-#    - video_recording
+    - overlay
+    - torch
+    - whitebalance_lock
+    - video_recording
