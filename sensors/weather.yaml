@@ -36,6 +36,7 @@
       - precip_today_in
       - precip_today_string
       - solarradiation
+      - UV
       - alerts
       - weather_1d
       - weather_1n
@@ -59,6 +60,13 @@
       - wind_1d_mph
       - precip_1d_in
       - precip_1d
+      
+- platform: template
+  sensors:
+    pws_pressure_trend:
+      value_template: '{% if is_state("sensor.pws_pressure_trend", "+") -%} up {%- elif is_state("sensor.pws_pressure_trend", "-") -%} down {%- else -%} even {%- endif %}'
+      friendly_name_template: '{{ states.sensor.pws_weather_1h.attributes.friendly_name }}'
+      entity_picture_template: '{{ states.sensor.pws_weather_1h.attributes.entity_picture }}'
 
 - platform: template
   sensors:
