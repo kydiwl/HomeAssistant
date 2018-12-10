@@ -68,7 +68,7 @@
   action:
   - data:
       message: Check Target List
-    service: telegram_bot.send_message
+    service: notify.kyles_phone
 - id: '1544368039706'
   alias: Harris Teeter Reminder
   trigger:
@@ -80,19 +80,7 @@
   action:
   - data:
       message: Check Grocery List
-    service: telegram_bot.send_message
-- id: '1544373909746'
-  alias: Turn ON Tv when I get home
-  trigger:
-  - entity_id: device_tracker.kyle_kylephone
-    event: enter
-    platform: zone
-    zone: zone.home
-  condition: []
-  action:
-  - data:
-      entity_id: media_player.kyles_tv
-    service: homeassistant.turn_on
+    service: notify.kyles_phone
 - id: '1544374019580'
   alias: Turn OFF Tv when I leave
   trigger:
@@ -104,4 +92,4 @@
   action:
   - data:
       entity_id: media_player.kyles_tv
-    service: automation.turn_off
+    service: homeassistant.turn_off
