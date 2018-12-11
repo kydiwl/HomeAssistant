@@ -1,24 +1,24 @@
-- host: !secret kitchen_ip_camera_addr
-  name: Kitchen Camera
-  port: !secret kitchen_ip_camera_port
-  sensors:
-    - audio_connections
-    - battery_level
-    - battery_temp
-    - battery_voltage
-    - light
-    - motion
-    - pressure
-    - proximity
-    - sound
-    - video_connections
-  switches:
-    - exposure_lock
-    - ffc
-    - focus
-    - gps_active
-    - night_vision
-    - overlay
-    - torch
-    - whitebalance_lock
-    - video_recording
+#- host: !secret kitchen_ip_camera_addr
+#  name: Kitchen Camera
+#  port: !secret kitchen_ip_camera_port
+#  sensors:
+#    - audio_connections
+#    - battery_level
+#    - battery_temp
+#    - battery_voltage
+#    - light
+#    - motion
+#    - pressure
+#    - proximity
+#    - sound
+#    - video_connections
+#  switches:
+#    - exposure_lock
+#    - ffc
+#    - focus
+#    - gps_active
+#    - night_vision
+#    - overlay
+#    - torch
+#    - whitebalance_lock
+#    - video_recording
