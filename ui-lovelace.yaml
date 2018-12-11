@@ -3,9 +3,9 @@
 #         Resources           #
 #                             #
 ###############################
-#resources:
-#  - url: /local/upcoming-media-card.js
-#    type: js
+resources:
+  - url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js
+    type: js
 
 ###############################
 #                             #
@@ -254,6 +254,21 @@ views:
           # Column - Weather Summary
           - type: vertical-stack
             cards:
+            # Row Station ID / Elevation / Location
+            - type: markdown
+              content: > 
+                ## Station
+            - type: horizontal-stack
+              cards:
+              - type: glance
+                entities:
+                  - sensor.pws_station_id
+              - type: glance
+                entities:
+                  - sensor.pws_elevation
+              - type: glance
+                entities:
+                  - sensor.pws_location
             - type: markdown
               content: >
                 ## Summary
@@ -281,21 +296,6 @@ views:
               - type: glance
                 entities:
                   - sensor.pws_observation_time
-            # Row Station ID / Elevation / Location
-            - type: markdown
-              content: > 
-                ## Station
-            - type: horizontal-stack
-              cards:
-              - type: glance
-                entities:
-                  - sensor.pws_station_id
-              - type: glance
-                entities:
-                  - sensor.pws_elevation
-              - type: glance
-                entities:
-                  - sensor.pws_location
         # Row - Wind / Precipitation cards
         - type: horizontal-stack
           cards:
@@ -428,20 +428,19 @@ views:
   - title: media
     icon: mdi:television
     cards:
-#      - type: custom:upcoming-media-card
-#        entity: sensor.sonarr_upcoming
-#        max: 5
-
-      - title: Kyles TV
-        type: entities
-        entities:
-          - media_player.kyles_tv
-          - media_player.kyle_roku
-      - title: Sonarr
-        type: glance
-        entities:
-          - sensor.sonarr_upcoming
-          - sensor.sonarr_queue
+    - type: custom:upcoming-media-card
+      entity: sensor.sonarr_upcoming_media
+      title: Upcoming TV
+#      - title: Kyles TV
+#        type: entities
+#        entities:
+#          - media_player.kyles_tv
+#          - media_player.kyle_roku
+#      - title: Sonarr
+#        type: glance
+#        entities:
+#          - sensor.sonarr_upcoming
+#          - sensor.sonarr_queue
         
 
 ###############################
