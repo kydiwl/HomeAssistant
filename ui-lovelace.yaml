@@ -4,7 +4,7 @@
 #                             #
 ###############################
 resources:
-  - url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js
+  - url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js?v=0.0.1
     type: js
 
 ###############################
@@ -427,10 +427,14 @@ views:
 ###############################
   - title: media
     icon: mdi:television
+    panel: true
     cards:
     - type: custom:upcoming-media-card
       entity: sensor.sonarr_upcoming_media
       title: Upcoming TV
+      all_shadows: false
+#      accent_color: '#899FD4'
+      
 #      - title: Kyles TV
 #        type: entities
 #        entities:
