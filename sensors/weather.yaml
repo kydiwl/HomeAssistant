@@ -23,7 +23,6 @@
       - dewpoint_f
       - dewpoint_string
       - wind_mph
-      - UV
       - pressure_in
       - pressure_mb
       - pressure_trend
