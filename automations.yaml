@@ -93,3 +93,19 @@
   - data:
       entity_id: media_player.kyles_tv
     service: homeassistant.turn_off
+- id: 'Set HA theme for day or night' 
+  alias: 'Set HA theme for day or night'
+  trigger:
+    - platform: homeassistant
+      event: start
+    - platform: state
+      entity_id: sun.sun
+      to: above_horizon
+    - platform: state
+      entity_id: sun.sun
+      to: below_horizon
+  action:
+    - service_template: frontend.set_theme
+      data_template:
+        name: '{% if states.sun.sun.state == "below_horizon" %} Dark-Green {% else %} Default {% endif %}'
+          
