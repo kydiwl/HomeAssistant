@@ -429,23 +429,38 @@ views:
     icon: mdi:television
     panel: true
     cards:
-    - type: custom:upcoming-media-card
-      entity: sensor.sonarr_upcoming_media
-      title: Upcoming TV
-      all_shadows: false
-#      accent_color: '#899FD4'
-      
-#      - title: Kyles TV
-#        type: entities
-#        entities:
-#          - media_player.kyles_tv
-#          - media_player.kyle_roku
-#      - title: Sonarr
-#        type: glance
-#        entities:
-#          - sensor.sonarr_upcoming
-#          - sensor.sonarr_queue
-        
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: custom:upcoming-media-card
+                entity: sensor.sonarr_upcoming_media
+                title: Upcoming TV
+                all_shadows: false
+              - type: conditional
+                conditions:
+                  - entity: media_player.kyles_tv
+                    state_not: 'unavailable'
+                card:
+                  type: glance
+                  title: "Kyle's TV"
+                  show_name: false
+                  entities:
+                    - media_player.kyles_tv
+              - type: conditional
+                conditions:
+                  - entity: media_player.kylekyle_roku_roku
+                    state_not: 'unavailable'
+                card:
+                  type: glance
+                  show_name: false
+                  entities:
+                    - media_player.
+              - title: Sonarr Queue
+                type: glance
+                show_name: false
+                entities:
+                  - sensor.sonarr_queue
 
 ###############################
 #                             #
