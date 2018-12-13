@@ -295,7 +295,7 @@ views:
                   - sensor.pws_solarradiation
               - type: glance
                 entities:
-                  - sensor.pws_observation_time
+                  - sensor.pws_observation_time_short_date
         # Row - Wind / Precipitation cards
         - type: horizontal-stack
           cards:
