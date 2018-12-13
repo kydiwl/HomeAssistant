@@ -134,7 +134,7 @@ sensor.pws_elevation:
   entity_picture: /local/icons/common/mountains.png
 sensor.pws_location:
   entity_picture: /local/icons/common/pin.png
-sensor.pws_observation_time:
+sensor.pws_observation_time_short_date:
   entity_picture: /local/icons/common/circular-clock.png
 sensor.pws_visibility_mi:
   entity_picture: /local/icons/common/binoculars.png
