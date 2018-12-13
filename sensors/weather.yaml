@@ -137,5 +137,11 @@
       friendly_name_template: '{{ states.sensor.pws_weather_24h.attributes.friendly_name }}'
       entity_picture_template: '{{ states.sensor.pws_weather_24h.attributes.entity_picture }}'
 
+- platform: template
+  sensors:
+    pws_observation_time_short_date:
+      value_template: "{{ states.sensor.pws_observation_time.state[:-4] | regex_replace('Last Updated on ','') }}"
+      friendly_name_template: '{{ states.sensor.pws_observation_time.attributes.friendly_name }}'
+      entity_picture_template: '{{ states.sensor.pws_observation_time.attributes.entity_picture }}'
 
-      
+        
