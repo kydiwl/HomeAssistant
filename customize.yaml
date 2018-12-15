@@ -1,6 +1,9 @@
 # OTHER 
 sensor.time:
   entity_picture: /local/icons/common/circular-clock.png
+device_tracker.kyle_kylephone:
+  entity_picture:
+    /local/myPhoto.PNG
 
 # SYSTEM DISK
 sensor.disk_use_percent_:
