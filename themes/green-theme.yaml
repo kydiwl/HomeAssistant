@@ -1,6 +1,6 @@
 Dark-Green:
   ### Main Interface Colors ###
-  primary-color: "#227924"
+  primary-color: "#227924"                                                  # Header and some link text
   light-primary-color: "#6CE66C"
   primary-background-color: "#4D4D5C"
   secondary-background-color: var(--primary-background-color)
@@ -8,7 +8,7 @@ Dark-Green:
   ### Text ###
   primary-text-color: "#FFFFFF"
   secondary-text-color: var(--primary-text-color)
-  text-primary-color: var(primary-text-color)
+  text-primary-color: var(--primary-text-color)
   disabled-text-color: "#464653"
   ### Sidebar Menu ###
   sidebar-icon-color: "#B6B6C1"
