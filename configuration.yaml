@@ -150,6 +150,7 @@ telegram_bot:
 
 #SSL/TLS
 http:
+  api_password: !secret hass_pass
   ssl_certificate: !secret dehydrate_ssl_cert_path
   ssl_key: !secret dehydrate_ssl_key_path
   base_url: !secret dyn_dns_addr
