@@ -60,7 +60,7 @@
 - id: '1544367955335'
   alias: Target Reminder
   trigger:
-  - entity_id: device_tracker.kyle_kylephone
+  - entity_id: device_tracker.kyle_phone
     event: enter
     platform: zone
     zone: zone.target_southpoint
@@ -72,7 +72,7 @@
 - id: '1544368039706'
   alias: Harris Teeter Reminder
   trigger:
-  - entity_id: device_tracker.kyle_kylephone
+  - entity_id: device_tracker.kyle_phone
     event: enter
     platform: zone
     zone: zone.harris_teeter
@@ -93,19 +93,19 @@
   - data:
       entity_id: media_player.kyles_tv
     service: homeassistant.turn_off
-- id: 'Set HA theme for day or night' 
-  alias: 'Set HA theme for day or night'
+- id: Set HA theme for day or night
+  alias: Set HA theme for day or night
   trigger:
-    - platform: homeassistant
-      event: start
-    - platform: state
-      entity_id: sun.sun
-      to: above_horizon
-    - platform: state
-      entity_id: sun.sun
-      to: below_horizon
+  - platform: homeassistant
+    event: start
+  - platform: state
+    entity_id: sun.sun
+    to: above_horizon
+  - platform: state
+    entity_id: sun.sun
+    to: below_horizon
   action:
-    - service_template: frontend.set_theme
-      data_template:
-        name: '{% if states.sun.sun.state == "below_horizon" %} Dark-Green {% else %} Default {% endif %}'
-          
+  - service_template: frontend.set_theme
+    data_template:
+      name: '{% if states.sun.sun.state == "below_horizon" %} Dark-Green {% else %}
+        Default {% endif %}'
