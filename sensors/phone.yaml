@@ -3,7 +3,7 @@
     kyle_phone_battery:
       value_template: "{{ state_attr('device_tracker.kyle_phone', 'battery') }}"
       unit_of_measurement: "%"
-      friendly_name: "Kyle's Phone Battery"
+      friendly_name: "Battery"
       entity_picture_template: >-
         {% if true %}
           /local/icons/common/battery.png
