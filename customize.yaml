@@ -1,7 +1,7 @@
 # OTHER 
 sensor.time:
   entity_picture: /local/icons/common/circular-clock.png
-device_tracker.kyle_kylephone:
+device_tracker.kyle_phone:
   entity_picture:
     /local/myPhoto.PNG
 
