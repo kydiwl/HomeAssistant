@@ -1,11 +1,21 @@
+- name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  radius: 250
+  icon: mdi:home
+
 - name: Work
   latitude: 35.808261
   longitude: -78.730254
+  radius: 250
+  icon: mdi:briefcase
   
 - name: Harris Teeter
   latitude: 35.917757 
   longitude: -78.958462
+  icon: mdi:store
   
 - name: Target Southpoint
   latitude: 35.902982
   longitude: -78.956088
+  icon: mdi:store
