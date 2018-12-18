@@ -109,3 +109,26 @@
     data_template:
       name: '{% if states.sun.sun.state == "below_horizon" %} Dark-Green {% else %}
         Default {% endif %}'
+- id: '1545128379623'
+  alias: Kyles Phone Battery Low
+  trigger:
+  - below: '20'
+    entity_id: sensor.kyle_phone_battery
+    platform: numeric_state
+  condition: []
+  action:
+  - data:
+      message: Phone battery below 20%
+    service: notify.kyles_phone
+- id: '1545128460515'
+  alias: Kyles phone fully charged
+  trigger:
+  - entity_id: sensor.kyle_phone_battery
+    from: '99'
+    platform: state
+    to: '100'
+  condition: []
+  action:
+  - data:
+      message: Phone is fully charged
+    service: notify.kyles_phone
