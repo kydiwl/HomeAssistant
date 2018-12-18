@@ -122,6 +122,7 @@ logbook:
   include:
     domains:
       - light
+      - device_tracker
       
 # Enables a map showing the location of tracked devices
 map:
@@ -134,7 +135,7 @@ tts:
   - platform: google
     
 # Cloud
-cloud:
+#cloud:
 
 # Hue lights hub
 hue:
