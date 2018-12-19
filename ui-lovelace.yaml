@@ -28,7 +28,7 @@ views:
           cards:
           - type: markdown
             content: >
-              ## Kyle's Phone
+              ## Kyle's Phone Information
           - type: horizontal-stack
             cards:
             - type: glance
