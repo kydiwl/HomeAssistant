@@ -166,5 +166,5 @@ media_player:
 
 shell_command:
   test_touch: 'chdir /tmp && touch test_touch_file'
-  git_pull: 'chdir /home/.homeassistant && git pull origin master > git.log'
+  git_pull: 'chdir /home/.homeassistant && /usr/local/bin/git pull origin master > git.log'
   who_am_i: whoami > /home/out.log
