@@ -163,3 +163,8 @@ media_player:
 #  - platform: roku
 #    host: !secret kyle_roku
 #    name: kyle_roku
+
+shell_command:
+  test_touch: 'chdir /tmp && touch test_touch_file'
+  git_pull: 'chdir /home/.homeassistant && git pull origin master > git.log'
+  who_am_i: whoami > /home/out.log
