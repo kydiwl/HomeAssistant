@@ -28,7 +28,7 @@ views:
           cards:
           - type: markdown
             content: >
-              ## Kyle's Phone Information
+              ## Kyle's Phone
           - type: horizontal-stack
             cards:
             - type: glance
@@ -93,7 +93,7 @@ views:
                     type: glance
                     entities:
                       - sensor.pws_UV
-                  
+
           - type: vertical-stack
             cards:
               - type: markdown
@@ -168,13 +168,13 @@ views:
                 content: >
                   ## Radar
               - type: picture-glance
-                # Don't show a title, but a value is necessary 
+                # Don't show a title, but a value is necessary
                 # to center the camera_image icon
                 title: " "
                 entities:
                   - camera.raleigh_radar
                 camera_image: camera.raleigh_satellite
-                
+
 
           - type: vertical-stack
             cards:
@@ -185,9 +185,9 @@ views:
                     icon: mdi:home
                   - entity: light.hue_garage_door_left
                     icon: mdi:garage
-                  - entity: light.hue_garage_door_right  
+                  - entity: light.hue_garage_door_right
                     icon: mdi:garage
-          
+
               - title: Web Links
                 type: entities
                 entities:
@@ -269,7 +269,7 @@ views:
             cards:
             # Row Station ID / Elevation / Location
             - type: markdown
-              content: > 
+              content: >
                 ## Station
             - type: horizontal-stack
               cards:
@@ -351,7 +351,7 @@ views:
               - type: glance
                 entities:
                   - sensor.pws_wind_string
-      
+
           # Column Precipitation
           - type: vertical-stack
             cards:
@@ -424,7 +424,7 @@ views:
                   entities:
                     - entity: light.hue_garage_door_left
                       tap_action: toggle
-                    - entity: light.hue_garage_door_right  
+                    - entity: light.hue_garage_door_right
                       tap_action: toggle
                 - type: glance
                   entities:
@@ -432,7 +432,7 @@ views:
                       tap_action: toggle
                     - entity: group.garage_door_lights
                       tap_action: toggle
-      
+
 ###############################
 #                             #
 #        Media Tab            #
@@ -608,7 +608,7 @@ views:
           entities:
             - sensor.cpu7_temp
           refresh_interval: 60
-         
+
 ###############################
 #                             #
 #       Web Cams Tab          #
