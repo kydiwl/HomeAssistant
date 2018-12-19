@@ -48,12 +48,11 @@ mqtt:
   broker: !secret mqtt_broker_addr
 
 device_tracker:
-  - platform: owntracks
-    max_gps_accuracy: 50
-    waypoints: true
-    mqtt_topic: "owntracks/#"
-    events_only: false
-      
+  - platform: google_maps
+    username: !secret ha_gmail_addr
+    password: !secret ha_gmail_pass
+    max_gps_accuracy: 200
+
 # Enables the frontend
 frontend:
   javascript_version: auto
