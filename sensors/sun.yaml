@@ -34,6 +34,7 @@
 - platform: template
   sensors:
     sunrise_dawn:
+      entity_id: sun.sun
       value_template: '{% set timestamp = as_timestamp(states.sun.sun.attributes.next_dawn) | timestamp_custom("%I:%M") %} {{ timestamp.lstrip("0") }}'
       friendly_name: "Dawn"
       unit_of_measurement: AM
