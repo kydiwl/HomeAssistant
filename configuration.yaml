@@ -122,7 +122,11 @@ logbook:
     domains:
       - light
       - device_tracker
-      
+
+# Set the log level in home-assistant.log
+logger:
+  default: debug
+  
 # Enables a map showing the location of tracked devices
 map:
 
