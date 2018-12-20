@@ -1,6 +1,7 @@
 - platform: template
   sensors:
     kyle_phone_battery:
+      entity_id: device_tracker.kyle_phone
       value_template: "{{ state_attr('device_tracker.kyle_phone', 'battery') }}"
       unit_of_measurement: "%"
       friendly_name: "Battery"
