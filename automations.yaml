@@ -108,7 +108,7 @@
   - service_template: frontend.set_theme
     data_template:
       name: '{% if states.sun.sun.state == "below_horizon" %} Dark-Green {% else %}
-        Default {% endif %}'
+        default {% endif %}'
 - id: '1545128379623'
   alias: Kyles Phone Battery Low
   trigger:
