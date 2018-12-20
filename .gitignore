@@ -9,4 +9,7 @@ dehydrated/
 home-assistant.log
 plex.conf
 webostv.conf
-
+custom_components/**/*.pyc
+**/*.bak
+git.log
+**/*.cookies
