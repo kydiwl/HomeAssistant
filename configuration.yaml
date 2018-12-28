@@ -125,8 +125,7 @@ logbook:
 
 # Set the log level in home-assistant.log
 logger:
-  default: debug
-  
+  default: info  
 # Enables a map showing the location of tracked devices
 map:
 
