@@ -15,6 +15,18 @@
   
 - platform: transmission
   host: 192.168.1.102
+  name: transmission series
+  monitored_variables:
+    - 'current_status'
+    - 'download_speed'
+    - 'upload_speed'
+    - 'active_torrents'
+    - 'paused_torrents'
+    - 'total_torrents'
+
+- platform: transmission
+  host: 192.168.1.107
+  name: transmission other
   monitored_variables:
     - 'current_status'
     - 'download_speed'

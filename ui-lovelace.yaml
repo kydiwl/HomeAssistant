@@ -437,39 +437,114 @@ views:
                 entity: sensor.sonarr_upcoming_media
                 title: Upcoming TV
                 all_shadows: false
-              - type: conditional
-                conditions:
-                  - entity: media_player.kyles_tv
-                    state_not: 'unavailable'
-                card:
-                  type: glance
-                  title: "Kyle's TV"
-                  show_name: false
-                  entities:
-                    - media_player.kyles_tv
-              - type: conditional
-                conditions:
-                  - entity: media_player.kylekyle_roku_roku
-                    state_not: 'unavailable'
-                card:
-                  type: glance
-                  show_name: false
-                  entities:
-                    - media_player.
-              - title: Sonarr Queue
-                type: glance
-                show_name: false
-                entities:
-                  - sensor.sonarr_queue
-              - title: Transmission
-                type: glance
-                entities:
-                  - sensor.transmission_active_torrents
-                  - sensor.transmission_down_speed
-                  - sensor.transmission_paused_torrents
-                  - sensor.transmission_status
-                  - sensor.transmission_total_torrents
-                  - sensor.transmission_up_speed
+              - type: vertical-stack
+                cards:
+                  - type: horizontal-stack
+                    cards:
+                      - type: conditional
+                        conditions:
+                          - entity: media_player.kyles_tv
+                            state_not: 'unavailable'
+                        card:
+                          type: glance
+                          title: "Kyle's TV"
+                          show_name: false
+                          entities:
+                            - media_player.kyles_tv
+                      - type: conditional
+                        conditions:
+                          - entity: media_player.kylekyle_roku_roku
+                            state_not: 'unavailable'
+                        card:
+                          type: glance
+                          show_name: false
+                          entities:
+                            - media_player.
+                      - title: Sonarr Queue
+                        type: glance
+                        show_name: false
+                        entities:
+                          - sensor.sonarr_queue
+                  - type: vertical-stack
+                    cards:
+                      - type: markdown
+                        content: >
+                          ## Series Downloads
+                      - type: vertical-stack
+                        cards:
+                          - type: horizontal-stack
+                            cards:
+                            - type: glance
+                              title: Active
+                              show_name: false
+                              entities:
+                                - sensor.transmission_series_active_torrents
+                            - type: glance
+                              title: Paused
+                              show_name: false
+                              entities:
+                                - sensor.transmission_series_paused_torrents
+                            - type: glance
+                              title: Status
+                              show_name: false
+                              entities:
+                                - sensor.transmission_series_status
+                          - type: horizontal-stack
+                            cards:
+                            - type: glance
+                              title: Total
+                              show_name: false
+                              entities:
+                                - sensor.transmission_series_total_torrents
+                            - type: glance
+                              title: Down Speed
+                              show_name: false
+                              entities:
+                                - sensor.transmission_series_down_speed
+                            - type: glance
+                              title: Up Speed
+                              show_name: false
+                              entities:
+                                - sensor.transmission_series_up_speed
+                      - type: markdown
+                        content: >
+                          ## Other Downloads
+                      - type: vertical-stack
+                        cards:
+                          - type: horizontal-stack
+                            cards:
+                            - type: glance
+                              title: Active
+                              show_name: false
+                              entities:
+                                - sensor.transmission_other_active_torrents
+                            - type: glance
+                              title: Paused
+                              show_name: false
+                              entities:
+                                - sensor.transmission_other_paused_torrents
+                            - type: glance
+                              title: Status
+                              show_name: false
+                              entities:
+                                - sensor.transmission_other_status
+                          - type: horizontal-stack
+                            cards:
+                            - type: glance
+                              title: Total
+                              show_name: false
+                              entities:
+                                - sensor.transmission_other_total_torrents
+                            - type: glance
+                              title: Down Speed
+                              show_name: false
+                              entities:
+                                - sensor.transmission_other_down_speed
+                            - type: glance
+                              title: Up Speed
+                              show_name: false
+                              entities:
+                                - sensor.transmission_other_up_speed
 
 ###############################
 #                             #
