@@ -453,13 +453,15 @@ views:
                             - media_player.kyles_tv
                       - type: conditional
                         conditions:
-                          - entity: media_player.kylekyle_roku_roku
+                          - entity: media_player.kyles_roku_2
                             state_not: 'unavailable'
                         card:
                           type: glance
+                          title: Kyle's Roku
                           show_name: false
                           entities:
-                            - media_player.
+                            - entity: media_player.kyles_roku_2
+#                              name: media_player.kyles_roku_2.media_title
                       - title: Sonarr Queue
                         type: glance
                         show_name: false
