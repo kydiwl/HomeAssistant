@@ -469,7 +469,7 @@ views:
                     cards:
                       - type: markdown
                         content: >
-                          ## Series Downloads
+                          ## [Series Downloads](http://192.168.1.102:9091/transmission/web/)
                       - type: vertical-stack
                         cards:
                           - type: horizontal-stack
@@ -508,7 +508,7 @@ views:
                                 - sensor.transmission_series_up_speed
                       - type: markdown
                         content: >
-                          ## Other Downloads
+                          ## [Other Downloads](http://192.168.1.107:9091/transmission/web/)
                       - type: vertical-stack
                         cards:
                           - type: horizontal-stack
