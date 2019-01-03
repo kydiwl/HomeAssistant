@@ -40,12 +40,12 @@
   action:
   - data:
       brightness_pct: 66
-      color_name: green
+      color_name: blue
       entity_id: light.hue_garage_door_left
     service: light.turn_on
   - data:
       brightness_pct: 66
-      color_name: red
+      color_name: white
       entity_id: light.hue_garage_door_right
     service: light.turn_on
 - id: '1543673628316'
