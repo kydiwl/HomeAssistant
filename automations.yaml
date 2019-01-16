@@ -30,6 +30,21 @@
   - data:
       message: Family room nightlight light is Off
     service: notify.kyles_tv
+#- id: front_porch_light_on_off
+#  alias: Front Porch Light ON OFF
+#  trigger:
+#  - platform: sun
+#    event: sunrise
+#  - platform: sun
+#    event: sunset
+#  condition: []
+#  action:
+#    - service_template: "{% if trigger.event == 'sunrise' %} light.turn_off {% else %} light.turn_on {% endif %}"
+#      data_template: >-
+#        {% if true %}
+#          entity_id: light.hue_front_porch
+#          brightness_pct: 25
+#        (% endif %}
 - id: '1543673341335'
   alias: Outside Garage Lights On
   trigger:
@@ -45,7 +60,7 @@
     service: light.turn_on
   - data:
       brightness_pct: 66
-      color_name: white
+      color_name: blue
       entity_id: light.hue_garage_door_right
     service: light.turn_on
 - id: '1543673628316'
@@ -95,22 +110,22 @@
   - data:
       entity_id: media_player.kyles_tv
     service: homeassistant.turn_off
-- id: Set HA theme for day or night
-  alias: Set HA theme for day or night
-  trigger:
-  - platform: homeassistant
-    event: start
-  - platform: state
-    entity_id: sun.sun
-    to: above_horizon
-  - platform: state
-    entity_id: sun.sun
-    to: below_horizon
-  action:
-  - service_template: frontend.set_theme
-    data_template:
-      name: '{% if states.sun.sun.state == "below_horizon" %} Dark-Green {% else %}
-        default {% endif %}'
+#- id: Set HA theme for day or night
+#  alias: Set HA theme for day or night
+#  trigger:
+#  - platform: homeassistant
+#    event: start
+#  - platform: state
+#    entity_id: sun.sun
+#    to: above_horizon
+#  - platform: state
+#    entity_id: sun.sun
+#    to: below_horizon
+#  action:
+#  - service_template: frontend.set_theme
+#    data_template:
+#      name: '{% if states.sun.sun.state == "below_horizon" %} Dark-Green {% else %}
+#        default {% endif %}'
 - id: '1545128379623'
   alias: Kyles Phone Battery Low
   trigger:
@@ -134,3 +149,25 @@
   - data:
       message: Phone is fully charged
     service: notify.kyles_phone
+#- id: '1546599900042'
+#  alias: Front Porch Light ON
+#  trigger:
+#  - event: sunset
+#    platform: sun
+#  condition: []
+#  action:
+#  - data:
+#      brightness_pct: 25
+#      color_name: white
+#      entity_id: light.hue_front_porch
+#    service: light.turn_on
+#- id: '1546600020577'
+#  alias: Front Porch Light OFF
+#  trigger:
+#  - event: sunrise
+#    platform: sun
+#  condition: []
+#  action:
+#  - data:
+#      entity_id: light.hue_front_porch
+#    service: light.turn_off
