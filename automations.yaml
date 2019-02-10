@@ -31,7 +31,7 @@
       message: Family room nightlight light is Off
     service: notify.kyles_tv
 - id: '1543673341335'
-  alias: Outside Garage Lights On
+  alias: Outside Lights On
   trigger:
   - event: sunset
     offset: +00:30:00
@@ -47,9 +47,14 @@
       brightness_pct: 66
       color_name: yellow
       entity_id: light.hue_garage_door_right
+    service: light.turn_on  - data:
+  - data:
+      brightness_pct: 20
+      color_name: blue
+      entity_id: light.hue_front_porch
     service: light.turn_on
 - id: '1543673628316'
-  alias: Outside Garage Lights Off
+  alias: Outside Lights Off
   trigger:
   - event: sunrise
     offset: -00:30:00
@@ -57,7 +62,7 @@
   condition: []
   action:
   - data:
-      entity_id: group.garage_door_lights
+      entity_id: group.outside_lights
     service: light.turn_off
 - id: '1544367955335'
   alias: Target Reminder
