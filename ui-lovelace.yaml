@@ -392,7 +392,8 @@ views:
                 ## Interior Lights
             - type: glance
               entities:
-                - light.hue_family_room_nightlight
+                - entity: light.hue_family_room_nightlight
+				  tap_action: toggle
         # Row - Outdor Lights
         - type: horizontal-stack
           cards:
