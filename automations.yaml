@@ -39,12 +39,12 @@
   condition: []
   action:
   - data:
-      brightness_pct: 66
+      brightness_pct: 80
       color_name: yellow
       entity_id: light.hue_garage_door_left
     service: light.turn_on
   - data:
-      brightness_pct: 66
+      brightness_pct: 80
       color_name: yellow
       entity_id: light.hue_garage_door_right
     service: light.turn_on  - data:
