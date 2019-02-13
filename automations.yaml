@@ -30,6 +30,7 @@
   - data:
       message: Family room nightlight light is Off
     service: notify.kyles_tv
+
 - id: '1543673341335'
   alias: Outside Lights On
   trigger:
@@ -47,12 +48,13 @@
       brightness_pct: 80
       color_name: yellow
       entity_id: light.hue_garage_door_right
-    service: light.turn_on  - data:
+    service: light.turn_on
   - data:
       brightness_pct: 20
       color_name: blue
       entity_id: light.hue_front_porch
     service: light.turn_on
+
 - id: '1543673628316'
   alias: Outside Lights Off
   trigger:
@@ -64,6 +66,7 @@
   - data:
       entity_id: group.outside_lights
     service: light.turn_off
+
 - id: '1544367955335'
   alias: Target Reminder
   trigger:
@@ -76,6 +79,7 @@
   - data:
       message: Check Target List
     service: notify.kyles_phone
+
 - id: '1544368039706'
   alias: Harris Teeter Reminder
   trigger:
@@ -88,6 +92,7 @@
   - data:
       message: Check Grocery List
     service: notify.kyles_phone
+
 - id: '1544374019580'
   alias: Turn OFF Tv when I leave
   trigger:
@@ -100,6 +105,7 @@
   - data:
       entity_id: media_player.kyles_tv
     service: homeassistant.turn_off
+
 - id: '1545128379623'
   alias: Kyles Phone Battery Low
   trigger:
@@ -111,6 +117,7 @@
   - data:
       message: Phone battery below 20%
     service: notify.kyles_phone
+
 - id: '1545128460515'
   alias: Kyles phone fully charged
   trigger:
