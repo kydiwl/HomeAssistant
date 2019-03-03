@@ -467,7 +467,11 @@ views:
                         type: glance
                         show_name: false
                         entities:
-                          - sensor.sonarr_queue
+                          - entity: sensor.sonarr_queue
+                            tap_action: 
+                              action: navigate
+#                            navigation_path: http://192.168.1.101:8989/
+#                              navigation_path: /lovelace/2
                   - type: vertical-stack
                     cards:
                       - type: markdown
