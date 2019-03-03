@@ -30,6 +30,74 @@ views:
             cards:
               - type: markdown
                 content: >
+                  ## Radar
+              - type: picture-glance
+                # Don't show a title, but a value is necessary
+                # to center the camera_image icon
+                title: " "
+                entities:
+                  - camera.raleigh_radar
+                camera_image: camera.raleigh_satellite
+
+
+          - type: vertical-stack
+            cards:
+            - type: markdown
+              content: >
+                ## Light Toggles
+            - type: markdown
+              content: >
+                ### Outdoor Lights
+            - type: horizontal-stack
+              cards:
+              - type: glance
+                entities:
+                  - entity: light.hue_front_porch
+                    tap_action: toggle
+              - type: glance
+                entities:
+                  - entity: light.hue_garage_door_left
+                    tap_action: toggle
+                  - entity: light.hue_garage_door_right
+                    tap_action: toggle
+            - type: markdown
+              content: >
+                ### Indoor Lights
+            - type: horizontal-stack
+              cards:
+              - type: glance
+                entities:
+                  - entity: light.hue_family_room_nightlight
+                    tap_action: toggle
+
+        - type: horizontal-stack
+          cards:
+          - title: Web Links
+            type: entities
+            entities:
+              - type: weblink
+                url: https://www.mynexia.com/login
+                icon: mdi:thermostat
+                name: mynexia
+
+###############################
+#                             #
+#        Weather Tab          #
+#                             #
+###############################
+  - title: weather
+    icon: mdi:cloud-outline
+    panel: true
+    cards:
+      # Parent card
+      - type: vertical-stack
+        cards:
+        - type: horizontal-stack
+          cards:
+          - type: vertical-stack
+            cards:
+              - type: markdown
+                content: >
                   ## Current Conditions
               - type: horizontal-stack
                 cards:
@@ -146,55 +214,6 @@ views:
               - type: entities
                 entities:
                   - sensor.pws_weather_4n
-
-        - type: horizontal-stack
-          cards:
-          - type: vertical-stack
-            cards:
-              - type: markdown
-                content: >
-                  ## Radar
-              - type: picture-glance
-                # Don't show a title, but a value is necessary
-                # to center the camera_image icon
-                title: " "
-                entities:
-                  - camera.raleigh_radar
-                camera_image: camera.raleigh_satellite
-
-
-          - type: vertical-stack
-            cards:
-              - title: Porch Lights
-                type: glance
-                entities:
-                  - entity: light.hue_front_porch
-                    icon: mdi:home
-                  - entity: light.hue_garage_door_left
-                    icon: mdi:garage
-                  - entity: light.hue_garage_door_right
-                    icon: mdi:garage
-
-              - title: Web Links
-                type: entities
-                entities:
-                  - type: weblink
-                    url: https://www.mynexia.com/login
-                    icon: mdi:thermostat
-                    name: mynexia
-
-###############################
-#                             #
-#        Weather Tab          #
-#                             #
-###############################
-  - title: weather
-    icon: mdi:cloud-outline
-    panel: true
-    cards:
-      # Parent card
-      - type: vertical-stack
-        cards:
         # Row - Sun / Summary / Comfort cards
         - type: horizontal-stack
           cards:
@@ -390,11 +409,12 @@ views:
             - type: markdown
               content: >
                 ## Interior Lights
-            - type: glance
-              entities:
-                - entity: light.hue_family_room_nightlight
-                  tap_action: toggle
-        # Row - Outdor Lights
+            - type: horizontal-stack
+              cards:
+              - type: glance
+                entities:
+                  - entity: light.hue_family_room_nightlight
+        # Row - Outdoor Lights
         - type: horizontal-stack
           cards:
           - type: vertical-stack
@@ -404,22 +424,23 @@ views:
                 ## Outdoor Lights
             - type: horizontal-stack
               cards:
-                - type: glance
-                  entities:
-                    - entity: light.hue_front_porch
-                      tap_action: toggle
-                - type: glance
-                  entities:
-                    - entity: light.hue_garage_door_left
-                      tap_action: toggle
-                    - entity: light.hue_garage_door_right
-                      tap_action: toggle
-                - type: glance
-                  entities:
-                    - entity: group.porch_lights
-                      tap_action: toggle
-                    - entity: group.garage_door_lights
-                      tap_action: toggle
+              - title: Porch Lights
+                type: glance
+                entities:
+                  - entity: light.hue_front_porch
+                    icon: mdi:home
+                  - entity: light.hue_garage_door_left
+                    icon: mdi:garage
+                  - entity: light.hue_garage_door_right
+                    icon: mdi:garage
+              - title: Group Toggles
+                type: glance
+                entities:
+                  - entity: group.porch_lights
+                    tap_action: toggle
+                  - entity: group.garage_door_lights
+                    tap_action: toggle
+                    icon: mdi:garage
 
 ###############################
 #                             #
