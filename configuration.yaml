@@ -15,7 +15,7 @@ homeassistant:
   # Comment this
   packages: !include_dir_named packages
 
-  
+
 ##############################################
 #                                            #
 #               INCLUDES                     #
@@ -44,8 +44,8 @@ zone: !include zones.yaml
 # Enables running python scripts
 #python_script:
 
-mqtt:
-  broker: !secret mqtt_broker_addr
+#mqtt:
+#  broker: !secret mqtt_broker_addr
 
 device_tracker:
   - platform: google_maps
@@ -57,7 +57,7 @@ device_tracker:
 frontend:
   javascript_version: auto
   themes: !include_dir_merge_named themes
-  
+
 # Enables configuration UI
 config:
 
@@ -125,7 +125,7 @@ logbook:
 
 # Set the log level in home-assistant.log
 logger:
-  default: info  
+  default: info
 # Enables a map showing the location of tracked devices
 map:
 
@@ -135,7 +135,7 @@ sun:
 # Text to speech
 tts:
   - platform: google
-    
+
 # Cloud
 #cloud:
 
@@ -143,7 +143,7 @@ tts:
 hue:
   bridges:
     - host: !secret hue_hub_addr
-    
+
 # Telegram messaging
 telegram_bot:
   - platform: polling
@@ -152,11 +152,11 @@ telegram_bot:
       - !secret kyles_phone_telegram_chat_id
 
 #SSL/TLS
-http:
-  api_password: !secret hass_pass
-  ssl_certificate: !secret dehydrate_ssl_cert_path
-  ssl_key: !secret dehydrate_ssl_key_path
-  base_url: !secret dyn_dns_addr
+#http:
+#  api_password: !secret hass_pass
+#  ssl_certificate: !secret dehydrate_ssl_cert_path
+#  ssl_key: !secret dehydrate_ssl_key_path
+#  base_url: !secret dyn_dns_addr
 
 media_player:
   - platform: webostv
