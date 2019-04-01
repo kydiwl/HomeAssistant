@@ -185,6 +185,9 @@ views:
                 entities:
                   - sensor.weather_24h_summary
 
+
+        - type: horizontal-stack
+          cards:
           - type: vertical-stack
             cards:
               - type: markdown
