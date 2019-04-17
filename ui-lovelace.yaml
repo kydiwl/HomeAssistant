@@ -28,8 +28,8 @@ views:
         content: >
           ## Forecast Summary
         - type: entities
-        entities:
-          - sensor.dark_sky_daily_summary
+          entities:
+            - sensor.dark_sky_daily_summary
         - type: horizontal-stack
           cards:
           - type: vertical-stack
