@@ -374,7 +374,7 @@ views:
               cards:
               - type: glance
                 entities:
-                  - sensor.pws_feelslike_f
+                  - sensor.weather_2h_summary
               - type: glance
                 entities:
                   - sensor.pws_heat_index_f
