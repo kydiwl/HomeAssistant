@@ -33,6 +33,8 @@ views:
                 ## Forecast Summary
             - type: entities
               entities:
+                - entity: sensor.dark_sky_minutely_summary
+                  name: Current
                 - entity: sensor.dark_sky_hourly_summary
                   name: Today
                 - entity: sensor.dark_sky_daily_summary
@@ -114,10 +116,6 @@ views:
                   entities:
                     - entity: sensor.dark_sky_summary
                       name: Sky
-                - type: glance
-                  entities:
-                    - entity: sensor.dark_sky_minutely_summary
-                      name: Summary
                 - type: glance
                   entities:
                     - entity: sensor.dark_sky_icon
