@@ -55,5 +55,4 @@
   sensors:
     weather_2h_summary:
       value_template: '{{ states.weather.dark_sky.attributes.forecast[2].temperature }}'
-      friendly_name_tamplate: 'temp_2hr'
       
