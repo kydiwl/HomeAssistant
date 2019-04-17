@@ -29,7 +29,10 @@ views:
             ## Forecast Summary
         - type: entities
           entities:
-            - sensor.dark_sky_daily_summary
+            - entity: sensor.dark_sky_hourly_summary
+              name: Today
+            - entity: sensor.dark_sky_daily_summary
+              name: 3 Day
         - type: horizontal-stack
           cards:
           - type: vertical-stack
