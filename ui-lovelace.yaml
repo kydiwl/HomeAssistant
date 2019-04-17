@@ -112,6 +112,92 @@ views:
                 cards:
                 - type: glance
                   entities:
+                    - entity: sensor.dark_sky_summary
+                      name: Sky
+                - type: glance
+                  entities:
+                    - entity: sensor.dark_sky_minutely_summary
+                      name: Summary
+                - type: glance
+                  entities:
+                    - entity: sensor.dark_sky_icon
+                      name: Sky
+                - type: glance
+                  entities:
+                    - entity: sensor.dark_sky_cloud_coverage
+                      name: Clouds
+                - type: glance
+                  entities:
+                    - entity: sensor.dark_sky_daily_max_precip_intensity
+                      name: Max Precip Intensity
+                - type: glance
+                  entities:
+                    - entity: sensor.dark_sky_daytime_high_apparent_temperature
+                      name: High Apparent Temp
+              - type: horizontal-stack
+                cards:
+                - type: glance
+                  entities:
+                    - entity: sensor.dark_sky_daytime_high_temperature
+                      name: High Temp
+                - type: glance
+                  entities:
+                    - entity: sensor.dark_sky_dew_point
+                      name: Dew Point
+                - type: glance
+                  entities:
+                    - entity: sensor.dark_sky_moon_phase
+                      name: Moon Phase
+                - type: glance
+                  entities:
+                    - entity: sensor.dark_sky_nearest_storm_distance
+                      name: Nearest Storm
+                - type: glance
+                  entities:
+                    - entity: sensor.dark_sky_nearest_storm_bearing
+                      name: Nearest Storm Bearing
+                - type: glance
+                  entities:
+                    - entity: sensor.dark_sky_overnight_low_apparent_temperature
+                      name: Overnight Low Apparent Temp
+              - type: horizontal-stack
+                cards:
+                - type: glance
+                  entities:
+                    - entity: sensor.dark_sky_overnight_low_temperature
+                      name: Overnight Low
+                - type: glance
+                  entities:
+                    - entity: sensor.dark_sky_ozone
+                      name: Ozone
+                - type: glance
+                  entities:
+                    - entity: sensor.dark_sky_precip
+                      name: Precipitation
+                - type: glance
+                  entities:
+                    - entity: sensor.dark_sky_precip_accumulation
+                      name: Precip Accumulation
+                - type: glance
+                  entities:
+                    - entity: sensor.dark_sky_precip_intensity
+                      name: Precip Intensity
+                - type: glance
+                  entities:
+                    - entity: sensor.dark_sky_precip_probability
+                      name: Precip Chance
+              - type: horizontal-stack
+                cards:
+                - type: glance
+                  entities:
+                    - entity: sensor.dark_sky_pressure
+                      name: Pressure
+                - type: glance
+                  entities:
+                    - entity: sensor.dark_sky_visibility
+                      name: Visibility
+                - type: glance
+                  entities:
                     - entity: sensor.dark_sky_temperature
                       name: Temperature
                 - type: glance
@@ -122,12 +208,12 @@ views:
                   entities:
                     - entity: sensor.dark_sky_humidity
                       name: Humidity
-              - type: horizontal-stack
-                cards:
                 - type: glance
                   entities:
                     - entity: sensor.dark_sky_dew_point
                       name: Dew Point
+              - type: horizontal-stack
+                cards:
                 - type: glance
                   entities:
                     - entity: sensor.dark_sky_wind_speed
@@ -136,8 +222,6 @@ views:
                   entities:
                     - entity: sensor.dark_sky_wind_bearing
                       name: Wind Bearing
-              - type: horizontal-stack
-                cards:
                 - type: glance
                   entities:
                     - entity: sensor.dark_sky_visibility
@@ -151,43 +235,6 @@ views:
                     entities:
                       - entity: sensor.dark_sky_uv_index
                         name: UV Index
-
-          - type: vertical-stack
-            cards:
-              - type: markdown
-                content: >
-                  ## Hourly Forecast
-              - type: entities
-                entities:
-                  - sensor.weather_1h_summary
-              - type: entities
-                entities:
-                  - sensor.weather_2h_summary
-              - type: entities
-                entities:
-                  - sensor.weather_3h_summary
-              - type: entities
-                entities:
-                  - sensor.weather_4h_summary
-              - type: entities
-                entities:
-                  - sensor.weather_5h_summary
-              - type: entities
-                entities:
-                  - sensor.weather_6h_summary
-              - type: entities
-                entities:
-                  - sensor.weather_9h_summary
-              - type: entities
-                entities:
-                  - sensor.weather_12h_summary
-              - type: entities
-                entities:
-                  - sensor.weather_18h_summary
-              - type: entities
-                entities:
-                  - sensor.weather_24h_summary
-
 
         - type: horizontal-stack
           cards:
