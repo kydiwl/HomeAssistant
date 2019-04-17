@@ -124,7 +124,7 @@ views:
                   entities:
                     - entity: sensor.dark_sky_daily_max_precip_intensity
                       name: Max Precip Intensity
-                    icon: /local/icons/common/thermometer.png
+                      icon: /local/icons/common/thermometer.png
                 - type: glance
                   entities:
                     - entity: sensor.dark_sky_daytime_high_apparent_temperature
