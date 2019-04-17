@@ -55,4 +55,5 @@
   sensors:
     weather_2h_summary:
       value_template: '{{ states.weather.dark_sky.attributes.forecast[2].temperature }}'
+      friendly_name_template: '{% set timestamp = as_timestamp(states.weather.dark_sky.attributes.forecast[2].datetime) | timestamp_custom("%a %I:%M %p") %}{{ timestamp.lstrip("0") }}'
       
