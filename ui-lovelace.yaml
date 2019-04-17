@@ -28,25 +28,25 @@ views:
           cards:
           - type: vertical-stack
             cards:
-              - type: markdown
-                content: >
-                  ## Forecast Summary
-              - type: entities
-                entities:
-                  - entity: sensor.dark_sky_hourly_summary
-                    name: Today
-                  - entity: sensor.dark_sky_daily_summary
-                    name: 3 Day
-              - type: markdown
-                content: >
-                  ## Radar
-              - type: picture-glance
-                # Don't show a title, but a value is necessary
-                # to center the camera_image icon
-                title: " "
-                entities:
-                  - camera.raleigh_radar
-                camera_image: camera.raleigh_satellite
+            - type: markdown
+              content: >
+                ## Forecast Summary
+            - type: entities
+              entities:
+                - entity: sensor.dark_sky_hourly_summary
+                  name: Today
+                - entity: sensor.dark_sky_daily_summary
+                  name: 3 Day
+            - type: markdown
+              content: >
+                ## Radar
+            - type: picture-glance
+              # Don't show a title, but a value is necessary
+              # to center the camera_image icon
+              title: " "
+              entities:
+                - camera.raleigh_radar
+              camera_image: camera.raleigh_satellite
 
 
           - type: vertical-stack
