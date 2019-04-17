@@ -24,19 +24,19 @@ views:
     cards: #!include cards/home.yaml
       - type: vertical-stack
         cards:
-        - type: markdown
-          content: >
-            ## Forecast Summary
-        - type: entities
-          entities:
-            - entity: sensor.dark_sky_hourly_summary
-              name: Today
-            - entity: sensor.dark_sky_daily_summary
-              name: 3 Day
         - type: horizontal-stack
           cards:
           - type: vertical-stack
             cards:
+            - type: markdown
+              content: >
+                ## Forecast Summary
+            - type: entities
+              entities:
+                - entity: sensor.dark_sky_hourly_summary
+                  name: Today
+                - entity: sensor.dark_sky_daily_summary
+                  name: 3 Day
               - type: markdown
                 content: >
                   ## Radar
