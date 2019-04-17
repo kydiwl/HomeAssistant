@@ -118,10 +118,6 @@ views:
                       name: Sky
                 - type: glance
                   entities:
-                    - entity: sensor.dark_sky_icon
-                      name: Sky
-                - type: glance
-                  entities:
                     - entity: sensor.dark_sky_cloud_coverage
                       name: Clouds
                 - type: glance
