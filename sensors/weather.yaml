@@ -3,10 +3,10 @@
 #  units: en
   scan_interval: 
     minutes: 3
-  forecast:
-    - 1
-    - 2
-    - 3
+#  forecast:
+#    - 1
+#    - 2
+#    - 3
   hourly_forecast:
     - 0
     - 1
