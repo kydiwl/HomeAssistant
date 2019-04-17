@@ -112,43 +112,33 @@ views:
                 cards:
                 - type: glance
                   entities:
-                    - sensor.pws_alerts
+                    - entity: sensor.dark_sky_temperature
+                      name: Temperature
                 - type: glance
                   entities:
-                    - sensor.dark_sky_temperature
+                    - entity: sensor.dark_sky_apparent_temperature
+                      name: Feels Like
                 - type: glance
                   entities:
-                    - sensor.dark_sky_humidity
+                    - entity: sensor.dark_sky_humidity
+                      name: Humidity
               - type: horizontal-stack
                 cards:
                 - type: glance
                   entities:
-                    - sensor.dark_sky_dew_point
-                - type: glance
-                  entities:
-                    - sensor.dark_sky_apparent_temperature
-                - type: glance
-                  entities:
-                    - sensor.pws_heat_index_f
-              - type: horizontal-stack
-                cards:
+                    - entity: sensor.dark_sky_dew_point
+                      name: Dew Point
                 - type: glance
                   entities:
                     - sensor.dark_sky_wind_speed
                 - type: glance
                   entities:
                     - sensor.dark_sky_wind_bearing
-                - type: glance
-                  entities:
-                    - sensor.pws_wind_string
               - type: horizontal-stack
                 cards:
                 - type: glance
                   entities:
                     - sensor.dark_sky_visibility
-                - type: glance
-                  entities:
-                    - sensor.pws_solarradiation
                 - type: conditional
                   conditions:
                     - entity: sensor.dark_sky_uv_index
@@ -156,7 +146,7 @@ views:
                   card:
                     type: glance
                     entities:
-                      - sensor.pws_UV
+                      - sensor.dark_sky_uv_index
 
           - type: vertical-stack
             cards:
