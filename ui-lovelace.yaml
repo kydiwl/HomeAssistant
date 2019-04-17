@@ -130,15 +130,18 @@ views:
                       name: Dew Point
                 - type: glance
                   entities:
-                    - sensor.dark_sky_wind_speed
+                    - entity: sensor.dark_sky_wind_speed
+                      name: Wind Speed
                 - type: glance
                   entities:
-                    - sensor.dark_sky_wind_bearing
+                    - entity: sensor.dark_sky_wind_bearing
+                      name: Wind Bearing
               - type: horizontal-stack
                 cards:
                 - type: glance
                   entities:
-                    - sensor.dark_sky_visibility
+                    - entity: sensor.dark_sky_visibility
+                      name: Visiblity
                 - type: conditional
                   conditions:
                     - entity: sensor.dark_sky_uv_index
@@ -146,7 +149,8 @@ views:
                   card:
                     type: glance
                     entities:
-                      - sensor.dark_sky_uv_index
+                      - entity: sensor.dark_sky_uv_index
+                        name: UV Index
 
           - type: vertical-stack
             cards:
