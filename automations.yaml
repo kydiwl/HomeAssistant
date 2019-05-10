@@ -1,42 +1,43 @@
-- id: '1541109387657'
+- id: 'Family Room Nightlight On'
   alias: Family Room Nightlight On
   trigger:
   - event: sunset
     platform: sun
   action:
-  - data:
+  - service: light.turn_on
+    data:
       brightness_pct: 66
       entity_id: light.hue_family_room_nightlight
-    service: light.turn_on
-  - data:
+  - service: notify.kyles_phone
+    data:
       message: Family room nightlight light is ON
-    service: notify.kyles_phone
-  - data:
+  - service: notify.kyles_tv
+    data:
       message: Family room nightlight light is On
-    service: notify.kyles_tv
-- id: '1541758470475'
+    
+- id: 'Family Room Nightlight Off'
   alias: Family Room Nightlight Off
   trigger:
-  - event: sunrise
-    platform: sun
+  - platform: sun
+    event: sunrise
   condition: []
   action:
-  - data:
-      entity_id: light.hue_family_room_nightlight
-    service: light.turn_off
-  - data:
+  - service: light.turn_off
+    entity_id: light.hue_family_room_nightlight
+  - service: notify.kyles_phone
+    data:
       message: Family room nightlight light is Off
-    service: notify.kyles_phone
-  - data:
+  - service: notify.kyles_tv
+    data:
       message: Family room nightlight light is Off
-    service: notify.kyles_tv
-
-- id: '1543673341335'
+   
+- id: 'Outside Lights On'
   alias: Outside Lights On
   trigger:
-  - event: sunset
-    offset: +00:30:00
-    platform: sun
+  - event_data:
+      offset: +00:30:00
+    event_type: sun
+    platform: event
   condition: []
   action:
   - data:
@@ -55,7 +56,7 @@
       entity_id: light.hue_front_porch
     service: light.turn_on
 
-- id: '1543673628316'
+- id: 'Outside Lights Off'
   alias: Outside Lights Off
   trigger:
   - event: sunrise
@@ -64,69 +65,12 @@
   condition: []
   action:
   - data:
-      entity_id: group.outside_lights
+      entity_id: light.hue_garage_door_left
     service: light.turn_off
-
-- id: '1544367955335'
-  alias: Target Reminder
-  trigger:
-  - entity_id: device_tracker.kyle_phone
-    event: enter
-    platform: zone
-    zone: zone.target_southpoint
-  condition: []
-  action:
   - data:
-      message: Check Target List
-    service: notify.kyles_phone
-
-- id: '1544368039706'
-  alias: Harris Teeter Reminder
-  trigger:
-  - entity_id: device_tracker.kyle_phone
-    event: enter
-    platform: zone
-    zone: zone.harris_teeter
-  condition: []
-  action:
+      entity_id: light.hue_garage_door_right
+    service: light.turn_off
   - data:
-      message: Check Grocery List
-    service: notify.kyles_phone
-
-- id: '1544374019580'
-  alias: Turn OFF Tv when I leave
-  trigger:
-  - entity_id: device_tracker.kyle_kylephone
-    event: leave
-    platform: zone
-    zone: zone.home
-  condition: []
-  action:
-  - data:
-      entity_id: media_player.kyles_tv
-    service: homeassistant.turn_off
-
-- id: '1545128379623'
-  alias: Kyles Phone Battery Low
-  trigger:
-  - below: '20'
-    entity_id: sensor.kyle_phone_battery
-    platform: numeric_state
-  condition: []
-  action:
-  - data:
-      message: Phone battery below 20%
-    service: notify.kyles_phone
-
-- id: '1545128460515'
-  alias: Kyles phone fully charged
-  trigger:
-  - entity_id: sensor.kyle_phone_battery
-    from: '99'
-    platform: state
-    to: '100'
-  condition: []
-  action:
-  - data:
-      message: Phone is fully charged
-    service: notify.kyles_phone
+      entity_id: light.hue_front_porch
+    service: light.turn_off
+   
