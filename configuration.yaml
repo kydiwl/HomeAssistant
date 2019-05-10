@@ -47,6 +47,8 @@ zone: !include zones.yaml
 #mqtt:
 #  broker: !secret mqtt_broker_addr
 
+system_health:
+
 device_tracker:
   - platform: google_maps
     username: !secret ha_gmail_addr
@@ -61,6 +63,8 @@ frontend:
 # Enables configuration UI
 config:
 
+lovelace:
+  mode: yaml
 # Checks for available updates
 # Note: This component will send some information about your system to
 # the developers to assist with development of Home Assistant.
@@ -81,20 +85,20 @@ history:
   include:
     domains:
       - light
-    entities:
-      - sensor.memory_free
-      - sensor.memory_use
-      - sensor.memory_use_percent
-      - sensor.disk_use_percent_
-      - sensor.disk_free_
-      - sensor.disk_use_
-      - sensor.swap_free
-      - sensor.swap_use
-      - sensor.swap_use_percent
-      - sensor.load_1m
-      - sensor.load_5m
-      - sensor.load_15m
-      - sensor.processor_use
+#    entities:
+#      - sensor.memory_free
+#      - sensor.memory_use
+#      - sensor.memory_use_percent
+#      - sensor.disk_use_percent_
+#      - sensor.disk_free_
+#      - sensor.disk_use_
+#      - sensor.swap_free
+#      - sensor.swap_use
+#      - sensor.swap_use_percent
+#      - sensor.load_1m
+#      - sensor.load_5m
+#      - sensor.load_15m
+#      - sensor.processor_use
 
 # View all events in a logbook
 logbook:
@@ -154,3 +158,5 @@ shell_command:
   test_touch: 'chdir /tmp && touch test_touch_file'
   git_pull: 'chdir /home/.homeassistant && /usr/local/bin/git pull origin master > git.log'
   who_am_i: whoami > /home/out.log
+
+python_script:
