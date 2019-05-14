@@ -63,8 +63,6 @@ frontend:
 # Enables configuration UI
 config:
 
-lovelace:
-  mode: yaml
 # Checks for available updates
 # Note: This component will send some information about your system to
 # the developers to assist with development of Home Assistant.
