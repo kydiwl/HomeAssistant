@@ -4,9 +4,10 @@
 #                             #
 ###############################
 resources:
-  - url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js?v=0.0.1
+  - url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js?v=0.0.2
     type: js
-
+  - url: /local/custom-lovelace/dark-sky-weather-card/dark-sky-weather-card.js?v=7.1
+    type: module
 ###############################
 #                             #
 #           Views             #
@@ -242,6 +243,29 @@ views:
             - type: markdown
               content: >
                 ## Hourly forecast
+            - type: custom:dark-sky-weather-card
+              entity_current_conditions: sensor.dark_sky_icon
+              entity_temperature: sensor.dark_sky_temperature
+              entity_forecast_high_temp_1: sensor.dark_sky_daytime_high_temperature_1d
+              entity_forecast_high_temp_2: sensor.dark_sky_daytime_high_temperature_2d
+              entity_forecast_high_temp_3: sensor.dark_sky_daytime_high_temperature_3d
+              entity_forecast_high_temp_4: sensor.dark_sky_daytime_high_temperature_4d
+              entity_forecast_high_temp_5: sensor.dark_sky_daytime_high_temperature_5d
+              entity_forecast_icon_1: sensor.dark_sky_icon_1d
+              entity_forecast_icon_2: sensor.dark_sky_icon_2d
+              entity_forecast_icon_3: sensor.dark_sky_icon_3d
+              entity_forecast_icon_4: sensor.dark_sky_icon_4d
+              entity_forecast_icon_5: sensor.dark_sky_icon_5d
+              entity_forecast_low_temp_1: sensor.dark_sky_overnight_low_temperature_0d
+              entity_forecast_low_temp_2: sensor.dark_sky_overnight_low_temperature_1d
+              entity_forecast_low_temp_3: sensor.dark_sky_overnight_low_temperature_2d
+              entity_forecast_low_temp_4: sensor.dark_sky_overnight_low_temperature_3d
+              entity_forecast_low_temp_5: sensor.dark_sky_overnight_low_temperature_4d
+              entity_summary_1: sensor.dark_sky_summary_1d
+              entity_summary_2: sensor.dark_sky_summary_2d
+              entity_summary_3: sensor.dark_sky_summary_3d
+              entity_summary_4: sensor.dark_sky_summary_4d
+              entity_summary_5: sensor.dark_sky_summary_5d
             - type: entities
               entities:
                 - entity: sensor.weather_1h_summary
@@ -283,35 +307,35 @@ views:
                       ## Day 1 Forecast
                   - type: entities
                     entities:
-                      - entity: sensor.dark_sky_precip_1
+                      - entity: sensor.dark_sky_precip_1d
                         name: Precip
-                      - entity: sensor.dark_sky_precip_probability_1
+                      - entity: sensor.dark_sky_precip_probability_1d
                         name: Chance of Precip
-                      - entity: sensor.dark_sky_precip_accumulation_1
+                      - entity: sensor.dark_sky_precip_accumulation_1d
                         name: Accumulation
-                      - entity: sensor.dark_sky_precip_intensity_1
+                      - entity: sensor.dark_sky_precip_intensity_1d
                         name: Precip Intensity
-                      - entity: sensor.dark_sky_icon_1
+                      - entity: sensor.dark_sky_icon_1d
                         name: Sky
-                      - entity: sensor.dark_sky_cloud_coverage_1
+                      - entity: sensor.dark_sky_cloud_coverage_1d
                         name: Cloud Coverage
-                      - entity: sensor.dark_sky_daily_max_precip_intensity_1
+                      - entity: sensor.dark_sky_daily_max_precip_intensity_1d
                         name: Max Precip Intensity
-                      - entity: sensor.dark_sky_daytime_high_apparent_temperature_1
+                      - entity: sensor.dark_sky_daytime_high_apparent_temperature_1d
                         name: High Apparent Temp
-                      - entity: sensor.dark_sky_daytime_high_temperature_1
+                      - entity: sensor.dark_sky_daytime_high_temperature_1d
                         name: High Daytime Temp
-                      - entity: sensor.dark_sky_dew_point_1
+                      - entity: sensor.dark_sky_dew_point_1d
                         name: Dewpoint
-                      - entity: sensor.dark_sky_humidity_1
+                      - entity: sensor.dark_sky_humidity_1d
                         name: Humidity
-                      - entity: sensor.dark_sky_moon_phase_1
+                      - entity: sensor.dark_sky_moon_phase_1d
                         name: Moon phase
-                      - entity: sensor.dark_sky_overnight_low_apparent_temperature_1
+                      - entity: sensor.dark_sky_overnight_low_apparent_temperature_1d
                         name: Low Apparent Temp
-                      - entity: sensor.dark_sky_overnight_low_temperature_1
+                      - entity: sensor.dark_sky_overnight_low_temperature_1d
                         name: Low Overnight Temp
-                      - entity: sensor.dark_sky_ozone_1
+                      - entity: sensor.dark_sky_ozone_1d
                         name: Ozone
                 - type: vertical-stack
                   cards:
@@ -320,35 +344,35 @@ views:
                       ## Day 2 Forecast
                   - type: entities
                     entities:
-                      - entity: sensor.dark_sky_precip_2
+                      - entity: sensor.dark_sky_precip_2d
                         name: Precip
-                      - entity: sensor.dark_sky_precip_probability_2
+                      - entity: sensor.dark_sky_precip_probability_2d
                         name: Chance of Precip
-                      - entity: sensor.dark_sky_precip_accumulation_2
+                      - entity: sensor.dark_sky_precip_accumulation_2d
                         name: Accumulation
-                      - entity: sensor.dark_sky_precip_intensity_2
+                      - entity: sensor.dark_sky_precip_intensity_2d
                         name: Precip Intensity
-                      - entity: sensor.dark_sky_icon_2
+                      - entity: sensor.dark_sky_icon_2d
                         name: Sky
-                      - entity: sensor.dark_sky_cloud_coverage_2
+                      - entity: sensor.dark_sky_cloud_coverage_2d
                         name: Cloud Coverage
-                      - entity: sensor.dark_sky_daily_max_precip_intensity_2
+                      - entity: sensor.dark_sky_daily_max_precip_intensity_2d
                         name: Max Precip Intensity
-                      - entity: sensor.dark_sky_daytime_high_apparent_temperature_2
+                      - entity: sensor.dark_sky_daytime_high_apparent_temperature_2d
                         name: High Apparent Temp
-                      - entity: sensor.dark_sky_daytime_high_temperature_2
+                      - entity: sensor.dark_sky_daytime_high_temperature_2d
                         name: High Daytime Temp
-                      - entity: sensor.dark_sky_dew_point_2
+                      - entity: sensor.dark_sky_dew_point_2d
                         name: Dewpoint
-                      - entity: sensor.dark_sky_humidity_2
+                      - entity: sensor.dark_sky_humidity_2d
                         name: Humidity
-                      - entity: sensor.dark_sky_moon_phase_2
+                      - entity: sensor.dark_sky_moon_phase_2d
                         name: Moon phase
-                      - entity: sensor.dark_sky_overnight_low_apparent_temperature_2
+                      - entity: sensor.dark_sky_overnight_low_apparent_temperature_2d
                         name: Low Apparent Temp
-                      - entity: sensor.dark_sky_overnight_low_temperature_2
+                      - entity: sensor.dark_sky_overnight_low_temperature_2d
                         name: Low Overnight Temp
-                      - entity: sensor.dark_sky_ozone_2
+                      - entity: sensor.dark_sky_ozone_2d
                         name: Ozone
                 - type: vertical-stack
                   cards:
@@ -357,35 +381,35 @@ views:
                       ## Day 3 Forecast
                   - type: entities
                     entities:
-                      - entity: sensor.dark_sky_precip_3
+                      - entity: sensor.dark_sky_precip_3d
                         name: Precip
-                      - entity: sensor.dark_sky_precip_probability_3
+                      - entity: sensor.dark_sky_precip_probability_3d
                         name: Chance of Precip
-                      - entity: sensor.dark_sky_precip_accumulation_3
+                      - entity: sensor.dark_sky_precip_accumulation_3d
                         name: Accumulation
-                      - entity: sensor.dark_sky_precip_intensity_3
+                      - entity: sensor.dark_sky_precip_intensity_3d
                         name: Precip Intensity
-                      - entity: sensor.dark_sky_icon_3
+                      - entity: sensor.dark_sky_icon_3d
                         name: Sky
-                      - entity: sensor.dark_sky_cloud_coverage_3
+                      - entity: sensor.dark_sky_cloud_coverage_3d
                         name: Cloud Coverage
-                      - entity: sensor.dark_sky_daily_max_precip_intensity_3
+                      - entity: sensor.dark_sky_daily_max_precip_intensity_3d
                         name: Max Precip Intensity
-                      - entity: sensor.dark_sky_daytime_high_apparent_temperature_3
+                      - entity: sensor.dark_sky_daytime_high_apparent_temperature_3d
                         name: High Apparent Temp
-                      - entity: sensor.dark_sky_daytime_high_temperature_3
+                      - entity: sensor.dark_sky_daytime_high_temperature_3d
                         name: High Daytime Temp
-                      - entity: sensor.dark_sky_dew_point_3
+                      - entity: sensor.dark_sky_dew_point_3d
                         name: Dewpoint
-                      - entity: sensor.dark_sky_humidity_3
+                      - entity: sensor.dark_sky_humidity_3d
                         name: Humidity
-                      - entity: sensor.dark_sky_moon_phase_3
+                      - entity: sensor.dark_sky_moon_phase_3d
                         name: Moon phase
-                      - entity: sensor.dark_sky_overnight_low_apparent_temperature_3
+                      - entity: sensor.dark_sky_overnight_low_apparent_temperature_3d
                         name: Low Apparent Temp
-                      - entity: sensor.dark_sky_overnight_low_temperature_3
+                      - entity: sensor.dark_sky_overnight_low_temperature_3d
                         name: Low Overnight Temp
-                      - entity: sensor.dark_sky_ozone_3
+                      - entity: sensor.dark_sky_ozone_3d
                         name: Ozone
         # Row - Sun / Summary / Comfort cards
         - type: horizontal-stack
@@ -650,88 +674,86 @@ views:
                           - entity: sensor.sonarr_queue
                             tap_action: 
                               action: navigate
-#                            navigation_path: http://192.168.1.101:8989/
-#                              navigation_path: /lovelace/2
-                  - type: vertical-stack
-                    cards:
-                      - type: markdown
-                        content: >
+#                  - type: vertical-stack
+#                    cards:
+#                      - type: markdown
+#                        content: >
                           ## [Series Downloads](http://192.168.1.102:9091/transmission/web/)
-                      - type: vertical-stack
-                        cards:
-                          - type: horizontal-stack
-                            cards:
-                            - type: glance
-                              title: Active
-                              show_name: false
-                              entities:
-                                - sensor.transmission_series_active_torrents
-                            - type: glance
-                              title: Paused
-                              show_name: false
-                              entities:
-                                - sensor.transmission_series_paused_torrents
-                            - type: glance
-                              title: Status
-                              show_name: false
-                              entities:
-                                - sensor.transmission_series_status
-                          - type: horizontal-stack
-                            cards:
-                            - type: glance
-                              title: Total
-                              show_name: false
-                              entities:
-                                - sensor.transmission_series_total_torrents
-                            - type: glance
-                              title: Down Speed
-                              show_name: false
-                              entities:
-                                - sensor.transmission_series_down_speed
-                            - type: glance
-                              title: Up Speed
-                              show_name: false
-                              entities:
-                                - sensor.transmission_series_up_speed
-                      - type: markdown
-                        content: >
+#                      - type: vertical-stack
+#                        cards:
+#                          - type: horizontal-stack
+#                            cards:
+#                            - type: glance
+#                              title: Active
+#                              show_name: false
+#                              entities:
+#                                - sensor.transmission_series_active_torrents
+#                            - type: glance
+#                              title: Paused
+#                              show_name: false
+#                              entities:
+#                                - sensor.transmission_series_paused_torrents
+#                            - type: glance
+#                              title: Status
+#                              show_name: false
+#                              entities:
+#                                - sensor.transmission_series_status
+#                          - type: horizontal-stack
+#                            cards:
+#                            - type: glance
+#                              title: Total
+#                              show_name: false
+#                              entities:
+#                                - sensor.transmission_series_total_torrents
+#                            - type: glance
+#                              title: Down Speed
+#                              show_name: false
+#                              entities:
+#                                - sensor.transmission_series_down_speed
+#                            - type: glance
+#                              title: Up Speed
+#                              show_name: false
+#                              entities:
+#                                - sensor.transmission_series_up_speed
+#                      - type: markdown
+#                        content: >
                           ## [Other Downloads](http://192.168.1.107:9091/transmission/web/)
-                      - type: vertical-stack
-                        cards:
-                          - type: horizontal-stack
-                            cards:
-                            - type: glance
-                              title: Active
-                              show_name: false
-                              entities:
-                                - sensor.transmission_other_active_torrents
-                            - type: glance
-                              title: Paused
-                              show_name: false
-                              entities:
-                                - sensor.transmission_other_paused_torrents
-                            - type: glance
-                              title: Status
-                              show_name: false
-                              entities:
-                                - sensor.transmission_other_status
-                          - type: horizontal-stack
-                            cards:
-                            - type: glance
-                              title: Total
-                              show_name: false
-                              entities:
-                                - sensor.transmission_other_total_torrents
-                            - type: glance
-                              title: Down Speed
-                              show_name: false
-                              entities:
-                                - sensor.transmission_other_down_speed
-                            - type: glance
-                              title: Up Speed
-                              show_name: false
-                              entities:
-                                - sensor.transmission_other_up_speed
+#                      - type: vertical-stack
+#                        cards:
+#                          - type: horizontal-stack
+#                            cards:
+#                            - type: glance
+#                              title: Active
+#                              show_name: false
+#                              entities:
+#                                - sensor.transmission_other_active_torrents
+#                            - type: glance
+#                              title: Paused
+#                              show_name: false
+#                              entities:
+#                                - sensor.transmission_other_paused_torrents
+#                            - type: glance
+#                              title: Status
+#                              show_name: false
+#                              entities:
+#                                - sensor.transmission_other_status
+#                          - type: horizontal-stack
+#                            cards:
+#                            - type: glance
+#                              title: Total
+#                              show_name: false
+#                              entities:
+#                                - sensor.transmission_other_total_torrents
+#                            - type: glance
+#                              title: Down Speed
+#                              show_name: false
+#                              entities:
+#                                - sensor.transmission_other_down_speed
+#                            - type: glance
+#                              title: Up Speed
+#                              show_name: false
+#                              entities:
+#                                - sensor.transmission_other_up_speed
 
 ###############################
 #                             #
@@ -773,17 +795,17 @@ views:
               ## Disk
           - type: horizontal-stack
             cards:
-            - type: vertical-stack
-              cards:
-              - type: glance
-                entities:
-                  - sensor.disk_use_percent_
-              - type: glance
-                entities:
-                  - sensor.disk_free_
-              - type: glance
-                entities:
-                  - sensor.disk_use_
+#            - type: vertical-stack
+#              cards:
+#              - type: glance
+#                entities:
+#                  - sensor.disk_use_percent_
+#              - type: glance
+#                entities:
+#                  - sensor.disk_free_
+#              - type: glance
+#                entities:
+#                  - sensor.disk_use_
             - type: vertical-stack
               cards:
               - type: glance
