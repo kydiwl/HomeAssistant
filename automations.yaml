@@ -1,4 +1,4 @@
-- id: 'Family Room Nightlight On'
+- id: Family Room Nightlight On
   alias: Family Room Nightlight On
   initial_state: true
   trigger:
@@ -37,10 +37,9 @@
   alias: Outside Lights On
   initial_state: true
   trigger:
-  - event_data:
-      offset: +00:30:00
-    event_type: sun
-    platform: event
+  - event: sunset
+    offset: +00:30:00
+    platform: sun
   condition: []
   action:
   - data:
@@ -59,7 +58,7 @@
       entity_id: light.hue_front_porch
     service: light.turn_on
 
-- id: 'Outside Lights Off'
+- id: Outside Lights Off
   initial_state: true
   alias: Outside Lights Off
   trigger:
@@ -77,4 +76,3 @@
   - data:
       entity_id: light.hue_front_porch
     service: light.turn_off
-   
