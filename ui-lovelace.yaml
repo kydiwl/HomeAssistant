@@ -123,12 +123,12 @@ views:
                       name: Sky
                 - type: glance
                   entities:
-                    - entity: sensor.dark_sky_cloud_coverage
-                      name: Clouds
+                    - entity: sensor.dark_sky_temperature
+                      name: Temperature
                 - type: glance
                   entities:
-                    - entity: sensor.dark_sky_daily_max_precip_intensity
-                      name: Max Precip Intensity
+                    - entity: sensor.dark_sky_apparent_temperature
+                      name: Feels Like
               - type: horizontal-stack
                 cards:
                 - type: glance
@@ -203,12 +203,12 @@ views:
                 cards:
                 - type: glance
                   entities:
-                    - entity: sensor.dark_sky_temperature
-                      name: Temperature
+                    - entity: sensor.dark_sky_cloud_coverage
+                      name: Clouds
                 - type: glance
                   entities:
-                    - entity: sensor.dark_sky_apparent_temperature
-                      name: Feels Like
+                    - entity: sensor.dark_sky_daily_max_precip_intensity
+                      name: Max Precip Intensity
                 - type: glance
                   entities:
                     - entity: sensor.dark_sky_humidity
