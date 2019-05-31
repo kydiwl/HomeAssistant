@@ -102,9 +102,11 @@ views:
               - type: glance
                 entities:
                   - entity: light.hue_garage_door_left
+                    name: Garage Left
                     tap_action: 
                       action: toggle
                   - entity: light.hue_garage_door_right
+                    name: Garage Right
                     tap_action: 
                       action: toggle
             - type: markdown
