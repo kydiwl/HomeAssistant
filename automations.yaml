@@ -15,8 +15,7 @@
   - service: notify.kyles_tv
     data:
       message: Family room nightlight light is On
-    
-- id: 'Family Room Nightlight Off'
+- id: Family Room Nightlight Off
   alias: Family Room Nightlight Off
   initial_state: true
   trigger:
@@ -32,10 +31,8 @@
   - service: notify.kyles_tv
     data:
       message: Family room nightlight light is Off
-   
-- id: 'Outside Lights On'
+- id: Outside Lights On
   alias: Outside Lights On
-  initial_state: true
   trigger:
   - event: sunset
     offset: +00:30:00
@@ -43,21 +40,21 @@
   condition: []
   action:
   - data:
-      brightness_pct: 80
+      brightness_pct: 60
       color_name: yellow
       entity_id: light.hue_garage_door_left
     service: light.turn_on
   - data:
-      brightness_pct: 80
+      brightness_pct: 60
       color_name: yellow
       entity_id: light.hue_garage_door_right
     service: light.turn_on
   - data:
-      brightness_pct: 20
+      brightness_pct: 10
       color_name: blue
       entity_id: light.hue_front_porch
     service: light.turn_on
-
+  initial_state: true
 - id: Outside Lights Off
   initial_state: true
   alias: Outside Lights Off
