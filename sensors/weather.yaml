@@ -4,9 +4,12 @@
   scan_interval: 
     minutes: 3
   forecast:
+    - 0
     - 1
     - 2
     - 3
+    - 4
+    - 5
   hourly_forecast:
 #    - 0
     - 1
@@ -15,7 +18,7 @@
     - 4
     - 5
     - 6
-    - 10
+    - 9
     - 12
     - 18
   monitored_conditions:
@@ -54,54 +57,53 @@
 - platform: template
   sensors:
     weather_1h_summary:
-      value_template: '{{ states.weather.dark_sky.attributes.forecast[0].condition[0]|upper }}{{ states.weather.dark_sky.attributes.forecast[0].condition[1:] }} with a {% if states.weather.dark_sky.attributes.forecast[0].precipitation|lower == "none" %}0{% else %}{{ states.weather.dark_sky.attributes.forecast[0].precipitation }}{% endif %}% chance of precipitation and {{ states.weather.dark_sky.attributes.forecast[0].temperature }} degrees.'
+      value_template: '{{ states.sensor.dark_sky_summary_1h.state }} with a {{ states.sensor.dark_sky_precip_probability_1h.state }}% chance of precipitation and {{ states.sensor.dark_sky_temperature_1h.state_with_unit }}.'
       friendly_name_template: '{% set timestamp = as_timestamp(states.weather.dark_sky.attributes.forecast[0].datetime) | timestamp_custom("%I:%M %p") %}{{ timestamp.lstrip("0") }}'
-
 - platform: template
   sensors:
     weather_2h_summary:
-      value_template: '{{ states.weather.dark_sky.attributes.forecast[1].condition[0]|upper }}{{ states.weather.dark_sky.attributes.forecast[1].condition[1:] }} with a {% if states.weather.dark_sky.attributes.forecast[1].precipitation|lower == "none" %}0{% else %}{{ states.weather.dark_sky.attributes.forecast[1].precipitation }}{% endif %}% chance of precipitation and {{ states.weather.dark_sky.attributes.forecast[1].temperature }} degrees.'
+      value_template: '{{ states.sensor.dark_sky_summary_2h.state }} with a {{ states.sensor.dark_sky_precip_probability_2h.state }}% chance of precipitation and {{ states.sensor.dark_sky_temperature_2h.state_with_unit }}.'
       friendly_name_template: '{% set timestamp = as_timestamp(states.weather.dark_sky.attributes.forecast[1].datetime) | timestamp_custom("%I:%M %p") %}{{ timestamp.lstrip("0") }}'
 
 - platform: template
   sensors:
     weather_3h_summary:
-      value_template: '{{ states.weather.dark_sky.attributes.forecast[2].condition[0]|upper }}{{ states.weather.dark_sky.attributes.forecast[2].condition[1:] }} with a {% if states.weather.dark_sky.attributes.forecast[2].precipitation|lower == "none" %}0{% else %}{{ states.weather.dark_sky.attributes.forecast[2].precipitation }}{% endif %}% chance of precipitation and {{ states.weather.dark_sky.attributes.forecast[2].temperature }} degrees.'
+      value_template: '{{ states.sensor.dark_sky_summary_3h.state }} with a {{ states.sensor.dark_sky_precip_probability_3h.state }}% chance of precipitation and {{ states.sensor.dark_sky_temperature_3h.state_with_unit }}.'
       friendly_name_template: '{% set timestamp = as_timestamp(states.weather.dark_sky.attributes.forecast[2].datetime) | timestamp_custom("%I:%M %p") %}{{ timestamp.lstrip("0") }}'
       
 - platform: template
   sensors:
     weather_4h_summary:
-      value_template: '{{ states.weather.dark_sky.attributes.forecast[3].condition[0]|upper }}{{ states.weather.dark_sky.attributes.forecast[3].condition[1:] }} with a {% if states.weather.dark_sky.attributes.forecast[3].precipitation|lower == "none" %}0{% else %}{{ states.weather.dark_sky.attributes.forecast[3].precipitation }}{% endif %}% chance of precipitation and {{ states.weather.dark_sky.attributes.forecast[3].temperature }} degrees.'
+      value_template: '{{ states.sensor.dark_sky_summary_4h.state }} with a {{ states.sensor.dark_sky_precip_probability_4h.state }}% chance of precipitation and {{ states.sensor.dark_sky_temperature_4h.state_with_unit }}.'
       friendly_name_template: '{% set timestamp = as_timestamp(states.weather.dark_sky.attributes.forecast[3].datetime) | timestamp_custom("%I:%M %p") %}{{ timestamp.lstrip("0") }}'
 
 - platform: template
   sensors:
     weather_5h_summary:
-      value_template: '{{ states.weather.dark_sky.attributes.forecast[4].condition[0]|upper }}{{ states.weather.dark_sky.attributes.forecast[4].condition[1:] }} with a {% if states.weather.dark_sky.attributes.forecast[4].precipitation|lower == "none" %}0{% else %}{{ states.weather.dark_sky.attributes.forecast[4].precipitation }}{% endif %}% chance of precipitation and {{ states.weather.dark_sky.attributes.forecast[4].temperature }} degrees.'
+      value_template: '{{ states.sensor.dark_sky_summary_5h.state }} with a {{ states.sensor.dark_sky_precip_probability_5h.state }}% chance of precipitation and {{ states.sensor.dark_sky_temperature_5h.state_with_unit }}.'
       friendly_name_template: '{% set timestamp = as_timestamp(states.weather.dark_sky.attributes.forecast[4].datetime) | timestamp_custom("%I:%M %p") %}{{ timestamp.lstrip("0") }}'
 
 - platform: template
   sensors:
     weather_6h_summary:
-      value_template: '{{ states.weather.dark_sky.attributes.forecast[5].condition[0]|upper }}{{ states.weather.dark_sky.attributes.forecast[5].condition[1:] }} with a {% if states.weather.dark_sky.attributes.forecast[5].precipitation|lower == "none" %}0{% else %}{{ states.weather.dark_sky.attributes.forecast[5].precipitation }}{% endif %}% chance of precipitation and {{ states.weather.dark_sky.attributes.forecast[5].temperature }} degrees.'
+      value_template: '{{ states.sensor.dark_sky_summary_6h.state }} with a {{ states.sensor.dark_sky_precip_probability_6h.state }}% chance of precipitation and {{ states.sensor.dark_sky_temperature_6h.state_with_unit }}.'
       friendly_name_template: '{% set timestamp = as_timestamp(states.weather.dark_sky.attributes.forecast[5].datetime) | timestamp_custom("%I:%M %p") %}{{ timestamp.lstrip("0") }}'
 
 - platform: template
   sensors:
     weather_9h_summary:
-      value_template: '{{ states.weather.dark_sky.attributes.forecast[8].condition[0]|upper }}{{ states.weather.dark_sky.attributes.forecast[8].condition[1:] }} with a {% if states.weather.dark_sky.attributes.forecast[8].precipitation|lower == "none" %}0{% else %}{{ states.weather.dark_sky.attributes.forecast[8].precipitation }}{% endif %}% chance of precipitation and {{ states.weather.dark_sky.attributes.forecast[8].temperature }} degrees.'
+      value_template: '{{ states.sensor.dark_sky_summary_9h.state }} with a {{ states.sensor.dark_sky_precip_probability_9h.state }}% chance of precipitation and {{ states.sensor.dark_sky_temperature_9h.state_with_unit }}.'
       friendly_name_template: '{% set timestamp = as_timestamp(states.weather.dark_sky.attributes.forecast[8].datetime) | timestamp_custom("%I:%M %p") %}{{ timestamp.lstrip("0") }}'
 
 - platform: template
   sensors:
     weather_12h_summary:
-      value_template: '{{ states.weather.dark_sky.attributes.forecast[11].condition[0]|upper }}{{ states.weather.dark_sky.attributes.forecast[11].condition[1:] }} with a {% if states.weather.dark_sky.attributes.forecast[11].precipitation|lower == "none" %}0{% else %}{{ states.weather.dark_sky.attributes.forecast[11].precipitation }}{% endif %}% chance of precipitation and {{ states.weather.dark_sky.attributes.forecast[11].temperature }} degrees.'
+      value_template: '{{ states.sensor.dark_sky_summary_12h.state }} with a {{ states.sensor.dark_sky_precip_probability_12h.state }}% chance of precipitation and {{ states.sensor.dark_sky_temperature_12h.state_with_unit }}.'
       friendly_name_template: '{% set timestamp = as_timestamp(states.weather.dark_sky.attributes.forecast[11].datetime) | timestamp_custom("%I:%M %p") %}{{ timestamp.lstrip("0") }}'
 
 - platform: template
   sensors:
     weather_18h_summary:
-      value_template: '{{ states.weather.dark_sky.attributes.forecast[17].condition[0]|upper }}{{ states.weather.dark_sky.attributes.forecast[17].condition[1:] }} with a {% if states.weather.dark_sky.attributes.forecast[17].precipitation|lower == "none" %}0{% else %}{{ states.weather.dark_sky.attributes.forecast[17].precipitation }}{% endif %}% chance of precipitation and {{ states.weather.dark_sky.attributes.forecast[17].temperature }} degrees.'
+      value_template: '{{ states.sensor.dark_sky_summary_18h.state }} with a {{ states.sensor.dark_sky_precip_probability_18h.state }}% chance of precipitation and {{ states.sensor.dark_sky_temperature_18h.state_with_unit }}.'
       friendly_name_template: '{% set timestamp = as_timestamp(states.weather.dark_sky.attributes.forecast[17].datetime) | timestamp_custom("%I:%M %p") %}{{ timestamp.lstrip("0") }}'
 
