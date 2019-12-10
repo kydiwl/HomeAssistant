@@ -1,52 +1,40 @@
 - id: Family Room Nightlight On
   alias: Family Room Nightlight On
-  initial_state: true
   trigger:
   - event: sunset
     platform: sun
   action:
-  - service: light.turn_on
-    data:
+  - data:
       brightness_pct: 66
       entity_id: light.hue_family_room_nightlight
-  - service: notify.kyles_phone
-    data:
-      message: Family room nightlight light is ON
-  - service: notify.kyles_tv
-    data:
-      message: Family room nightlight light is On
+    service: light.turn_on
+  initial_state: true
 - id: Family Room Nightlight Off
   alias: Family Room Nightlight Off
-  initial_state: true
   trigger:
-  - platform: sun
-    event: sunrise
+  - event: sunrise
+    platform: sun
   condition: []
   action:
-  - service: light.turn_off
-    entity_id: light.hue_family_room_nightlight
-  - service: notify.kyles_phone
-    data:
-      message: Family room nightlight light is Off
-  - service: notify.kyles_tv
-    data:
-      message: Family room nightlight light is Off
+  - entity_id: light.hue_family_room_nightlight
+    service: light.turn_off
+  initial_state: true
 - id: Outside Lights On
   alias: Outside Lights On
   trigger:
   - event: sunset
-    offset: +00:30:00
+    offset: +00:10:00
     platform: sun
   condition: []
   action:
   - data:
       brightness_pct: 60
-      color_name: yellow
+      color_name: green
       entity_id: light.hue_garage_door_left
     service: light.turn_on
   - data:
       brightness_pct: 60
-      color_name: yellow
+      color_name: red
       entity_id: light.hue_garage_door_right
     service: light.turn_on
   - data:
@@ -73,3 +61,16 @@
   - data:
       entity_id: light.hue_front_porch
     service: light.turn_off
+- id: Rachio zone 1
+  alias: Rachio zone 1
+  trigger:
+  - at: '15:00:00'
+    platform: time
+  condition:
+  - above: '80'
+    condition: numeric_state
+    entity_id: sensor.dark_sky_apparent_temperature
+  action:
+  - data:
+      message: rachio zone 1 triggered
+    service: notify.kyles_phone
