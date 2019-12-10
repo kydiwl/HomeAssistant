@@ -13,3 +13,4 @@ custom_components/**/*.pyc
 **/*.bak
 git.log
 **/*.cookies
+/known_devices.yaml
