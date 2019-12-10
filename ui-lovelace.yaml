@@ -8,6 +8,8 @@ resources:
     type: js
   - url: /local/custom-lovelace/dark-sky-weather-card/dark-sky-weather-card.js?v=7.1
     type: module
+#  - url: /local/custom-lovelace/content-card-example/content-card-example.js?v=0.2
+#    type: js
 ###############################
 #                             #
 #           Views             #
@@ -323,6 +325,8 @@ views:
           cards:
           - type: vertical-stack
             cards:
+ #             - type: "custom:content-card-example"
+ #               entity: sensor.dark_sky_daytime_high_apparent_temperature_1d
               - type: horizontal-stack
                 cards:
                 - type: vertical-stack
@@ -699,52 +703,52 @@ views:
                         show_name: false
                         entities:
                           - entity: sensor.sonarr_queue
-                            tap_action: 
-                              action: navigate
-#                  - type: vertical-stack
-#                    cards:
-#                      - type: markdown
-#                        content: >
+#                            tap_action: 
+#                              action: navigate
+                  - type: vertical-stack
+                    cards:
+                      - type: markdown
+                        content: >
                           ## [Series Downloads](http://192.168.1.102:9091/transmission/web/)
-#                      - type: vertical-stack
-#                        cards:
-#                          - type: horizontal-stack
-#                            cards:
-#                            - type: glance
-#                              title: Active
-#                              show_name: false
-#                              entities:
-#                                - sensor.transmission_series_active_torrents
-#                            - type: glance
-#                              title: Paused
-#                              show_name: false
-#                              entities:
-#                                - sensor.transmission_series_paused_torrents
-#                            - type: glance
-#                              title: Status
-#                              show_name: false
-#                              entities:
-#                                - sensor.transmission_series_status
-#                          - type: horizontal-stack
-#                            cards:
-#                            - type: glance
-#                              title: Total
-#                              show_name: false
-#                              entities:
-#                                - sensor.transmission_series_total_torrents
-#                            - type: glance
-#                              title: Down Speed
-#                              show_name: false
-#                              entities:
-#                                - sensor.transmission_series_down_speed
-#                            - type: glance
-#                              title: Up Speed
-#                              show_name: false
-#                              entities:
-#                                - sensor.transmission_series_up_speed
+                      - type: vertical-stack
+                        cards:
+                          - type: horizontal-stack
+                            cards:
+                            - type: glance
+                              title: Active
+                              show_name: false
+                              entities:
+                                - sensor.transmission_series_active_torrents
+                            - type: glance
+                              title: Paused
+                              show_name: false
+                              entities:
+                                - sensor.transmission_series_paused_torrents
+                            - type: glance
+                              title: Status
+                              show_name: false
+                              entities:
+                                - sensor.transmission_series_status
+                          - type: horizontal-stack
+                            cards:
+                            - type: glance
+                              title: Total
+                              show_name: false
+                              entities:
+                                - sensor.transmission_series_total_torrents
+                            - type: glance
+                              title: Down
+                              show_name: false
+                              entities:
+                                - sensor.transmission_series_down_speed
+                            - type: glance
+                              title: Up
+                              show_name: false
+                              entities:
+                                - sensor.transmission_series_up_speed
 #                      - type: markdown
 #                        content: >
-                          ## [Other Downloads](http://192.168.1.107:9091/transmission/web/)
+#                          ## [Other Downloads](http://192.168.1.107:9091/transmission/web/)
 #                      - type: vertical-stack
 #                        cards:
 #                          - type: horizontal-stack
@@ -772,12 +776,12 @@ views:
 #                              entities:
 #                                - sensor.transmission_other_total_torrents
 #                            - type: glance
-#                              title: Down Speed
+#                              title: Down
 #                              show_name: false
 #                              entities:
 #                                - sensor.transmission_other_down_speed
 #                            - type: glance
-#                              title: Up Speed
+#                              title: Up
 #                              show_name: false
 #                              entities:
 #                                - sensor.transmission_other_up_speed
