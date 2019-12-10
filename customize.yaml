@@ -3,18 +3,18 @@ sensor.time:
   entity_picture: /local/icons/common/circular-clock.png
 
 # SYSTEM DISK
-sensor.disk_use_percent_:
-  entity_picture: /local/icons/computer/disk.png
-sensor.disk_free_:
-  entity_picture: /local/icons/computer/disk.png
-sensor.disk_use_:
-  entity_picture: /local/icons/computer/disk.png
-sensor.swap_free:
-  entity_picture: /local/icons/computer/disk.png
-sensor.swap_use:
-  entity_picture: /local/icons/computer/disk.png
-sensor.swap_use_percent:
-  entity_picture: /local/icons/computer/disk.png
+#sensor.disk_use_percent_:
+#  entity_picture: /local/icons/computer/disk.png
+#sensor.disk_free_:
+#  entity_picture: /local/icons/computer/disk.png
+#sensor.disk_use_:
+#  entity_picture: /local/icons/computer/disk.png
+#sensor.swap_free:
+#  entity_picture: /local/icons/computer/disk.png
+#sensor.swap_use:
+#  entity_picture: /local/icons/computer/disk.png
+#sensor.swap_use_percent:
+#  entity_picture: /local/icons/computer/disk.png
 
 # SYSTEM SYSTEM
 sensor.last_boot:
@@ -92,9 +92,9 @@ sensor.pws_UV:
 #  unit_of_measurement: 'mJ/cm2'
 
 # WEATHER PRECIPITATION
-sensor.pws_precip_1hr_in:
+sensor.dark_sky_daily_max_precip_intensity_1:
   entity_picture: /local/icons/weather/umbrella.png
-sensor.pws_precip_today_in:
+sensor.dark_sky_daily_max_precip_intensity:
   entity_picture: /local/icons/weather/umbrella.png
 sensor.pws_precip_today_string:
   entity_picture: /local/icons/weather/umbrella.png
