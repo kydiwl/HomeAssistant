@@ -42,7 +42,7 @@ zone: !include zones.yaml
 #introduction:
 
 # Enables running python scripts
-#python_script:
+python_script:
 
 #mqtt:
 #  broker: !secret mqtt_broker_addr
@@ -63,6 +63,10 @@ frontend:
 # Enables configuration UI
 config:
 
+# Use ui-lovelace.yaml
+lovelace:
+  mode: yaml
+  
 # Checks for available updates
 # Note: This component will send some information about your system to
 # the developers to assist with development of Home Assistant.
@@ -108,6 +112,7 @@ logbook:
 # Set the log level in home-assistant.log
 logger:
   default: info
+
 # Enables a map showing the location of tracked devices
 map:
 
@@ -124,6 +129,7 @@ tts:
 weather:
   - platform: darksky
     api_key: !secret dark_sky_api_key
+
 # Hue lights hub
 hue:
   bridges:
@@ -157,4 +163,38 @@ shell_command:
   git_pull: 'chdir /home/.homeassistant && /usr/local/bin/git pull origin master > git.log'
   who_am_i: whoami > /home/out.log
 
-python_script:
+rachio:
+  api_key: !secret rachio_api_key
+  
+#sensor:
+#  - platform: transmission
+transmission:
+  host: 192.168.1.102
+  name: transmission series
+  monitored_conditions:
+    - current_status
+    - download_speed
+    - upload_speed
+    - active_torrents
+    - paused_torrents
+    - total_torrents
+    
+#  - platform: transmission
+#  - host: 192.168.1.107
+#    name: transmission other
+#    monitored_conditions:
+#      - 'current_status'
+#      - 'download_speed'
+#      - 'upload_speed'
+#      - 'active_torrents'
+#      - 'paused_torrents'
+#      - 'total_torrents'
+
+#  - platform: sonarr_upcoming_media
+#    api_key: !secret sonarr_api_key
+#    host: !secret sonarr_addr
+#    port: 8989
+#    days: 7
+#    urlbase: /usr/local/share/sonarr/
+#    ssl: false
+#    max: 20
